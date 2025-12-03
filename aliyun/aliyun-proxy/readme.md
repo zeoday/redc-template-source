@@ -20,6 +20,13 @@ auto
 rclone lsf r2:test
 ```
 
+**请自行替换 deploy.sh 中 upload_to_r2 函数的配置下载地址**
+
+对应
+```
+echo "url : https://这里改成你的 r2 地址/proxyfile/aliyun-config.yaml"
+```
+
 若启动场景报错，可能原因
 1. 阿里云账户余额不足 (需要大于 200)
 2. 与阿里云 api 网络连接超时
