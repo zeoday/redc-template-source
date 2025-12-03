@@ -1,10 +1,14 @@
 # 注意事项
 
+**区域配置**
+
 aws 开启 ap-east-1 (香港) 区域
 
 ![](../../img/redc-2.png)
 
 ![](../../img/redc-3.png)
+
+**launch_template 配置**
 
 自行替换 main.tf 中的 launch_template id 值
 

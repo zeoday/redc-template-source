@@ -1,5 +1,7 @@
 # 注意事项
 
+**r2 配置**
+
 deploy.sh 中的 upload_to_r2 函数负责将 clash 配置传至 r2
 
 请自行安装 rclone 并设置 rclone 与 r2 的配置
@@ -25,6 +27,13 @@ rclone lsf r2:test
 对应
 ```
 echo "url : https://这里改成你的 r2 地址/proxyfile/aliyun-config.yaml"
+```
+
+**抢占式实例**
+
+main.tf中已配置
+```
+spot_strategy              = "SpotWithPriceLimit"
 ```
 
 若启动场景报错，可能原因

@@ -20,7 +20,7 @@ provider "aws" {
 resource "aws_instance" "pte_node" {
     count                      = "${var.node_count}"
     launch_template {
-        id = "lt-0ec27b026658f1352"
+        id = "这个改成你的 launch_template id 值"
     }
 
     instance_type = "t4g.nano"

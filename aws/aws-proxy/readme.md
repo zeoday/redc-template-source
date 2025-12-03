@@ -1,5 +1,7 @@
 # 注意事项
 
+**r2 配置**
+
 deploy.sh 中的 upload_to_r2 函数负责将 clash 配置传至 r2
 
 请自行安装 rclone 并设置 rclone 与 r2 的配置
@@ -27,11 +29,15 @@ rclone lsf r2:test
 echo "url : https://这里改成你的 r2 地址/proxyfile/aws-config.yaml"
 ```
 
+**区域配置**
+
 aws 开启 ap-east-1 (香港) 区域
 
 ![](../../img/redc-2.png)
 
 ![](../../img/redc-3.png)
+
+**launch_template 配置**
 
 自行替换 main.tf 中的 launch_template id 值
 
