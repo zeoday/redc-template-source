@@ -39,12 +39,19 @@ CFAddRecords 传参中的 cf 的 邮箱 和 accesskey
 CFAddRecords "你的 cf 邮箱" "你的 cf accesskey" $2 "ns1.$2" "$ecs_ip"
 ```
 
-**请自行替换 main.tf 中 interactsh-server_1.2.4_linux_arm64.zip 的压缩包下载地址**
-- https://github.com/projectdiscovery/interactsh/releases
+**dig.pm 配置**
+- https://github.com/yumusb/DNSLog-Platform-Golang
 
-对应
+可以用我编译好的版本 (没啥区别,也可以自己编译原版)
+- https://github.com/No-Github/pdnslog/releases/tag/v1.0.0
+
+自行替换 main.tf 中几处静态文件下载地址
 ```
-sudo wget -O interactsh-server_1.2.4_linux_arm64.zip 'https://这里替换成你自己的静态下载地址'
+sudo wget -O pdnslog 'https://这里替换成你自己的静态下载地址'
+sudo wget -O index.html 'https://这里替换成你自己的静态下载地址'
+sudo wget -O main.js 'https://这里替换成你自己的静态下载地址'
+sudo wget -O dashboard.css 'https://这里替换成你自己的静态下载地址'
+sudo wget -O bootstrap.min.css 'https://这里替换成你自己的静态下载地址'
 ```
 
 若启动场景报错，可能原因
