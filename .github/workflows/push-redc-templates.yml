@@ -1,4 +1,4 @@
-name: Build and Deploy (Branch Fix)
+name: Build and Deploy (Strict Versioning)
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       force_rebuild:
-        description: 'Force rebuild'
+        description: 'Force rebuild all templates'
         required: false
         default: false
         type: boolean
 
 permissions:
-  contents: write  # <--- 必须改成 write，否则无法推送分支
+  contents: write
   pages: write
   id-token: write
 
@@ -26,7 +26,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      # 2. 拉取缓存 (Safe)
+      # 2. 拉取旧构建 (必须步骤：用于获取旧的 index.json 和 zip 文件)
       - name: Checkout Previous Build (Safe)
         run: |
           echo "🔍 Checking for existing gh-pages branch..."
@@ -34,11 +34,11 @@ jobs:
             echo "✅ Branch found. Cloning cache..."
             git clone --depth=1 --branch=gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git previous_build
           else
-            echo "⚠️ Branch 'gh-pages' not found (likely first run). Skipping cache."
+            echo "⚠️ Branch 'gh-pages' not found. Will build everything from scratch."
             mkdir -p previous_build
           fi
 
-      # 3. 执行构建
+      # 3. 智能构建脚本
       - name: Build with Python
         env:
           REPO_OWNER: ${{ github.repository_owner }}
@@ -55,6 +55,7 @@ jobs:
           import hashlib
           import datetime
 
+          # --- 配置 ---
           repo_owner = os.environ.get('REPO_OWNER')
           repo_name = os.environ.get('REPO_NAME')
           force_rebuild = os.environ.get('FORCE_REBUILD') == 'true'
@@ -62,40 +63,29 @@ jobs:
           base_url = f'https://{repo_owner}.github.io/{repo_name}'
           output_dir = 'public'
           templates_dir = os.path.join(output_dir, 'templates')
+          
+          # 缓存路径
           prev_build_dir = 'previous_build'
           prev_index_path = os.path.join(prev_build_dir, 'index.json')
+          
+          if not os.path.exists(templates_dir): os.makedirs(templates_dir)
 
-          def calculate_dir_hash(directory_path):
-              sha256_hash = hashlib.sha256()
-              for root, dirs, files in os.walk(directory_path):
-                  dirs.sort()
-                  for filename in sorted(files):
-                      if filename.startswith('.'): continue
-                      filepath = os.path.join(root, filename)
-                      try:
-                          with open(filepath, 'rb') as f:
-                              while True:
-                                  data = f.read(65536)
-                                  if not data: break
-                                  sha256_hash.update(data)
-                      except: pass
-              return sha256_hash.hexdigest()
-
+          # --- 1. 加载旧版本信息 ---
           old_map = {}
           if os.path.exists(prev_index_path) and not force_rebuild:
               try:
-                  with open(prev_index_path, 'r') as f:
+                  with open(prev_index_path, 'r', encoding='utf-8') as f:
                       data = json.load(f)
                       for t in data.get('templates', []):
                           old_map[t['id']] = t
                   print(f'📦 Loaded history for {len(old_map)} templates.')
-              except: pass
+              except Exception as e:
+                  print(f'⚠️ Failed to load previous index: {e}')
 
+          # --- 2. 遍历与处理 ---
           new_templates = []
           repo_root = '.'
           exclude = {'.git', '.github', 'public', 'previous_build', 'README.md', '.gitignore', 'index.html'}
-
-          if not os.path.exists(templates_dir): os.makedirs(templates_dir)
 
           for provider in sorted(os.listdir(repo_root)):
               provider_path = os.path.join(repo_root, provider)
@@ -108,72 +98,100 @@ jobs:
                   template_id = f'{provider}/{template}'
                   zip_name = f'{provider}_{template}.zip'
                   zip_output_path = os.path.join(templates_dir, zip_name)
-                  
-                  current_src_hash = calculate_dir_hash(template_path)
-                  
-                  old_data = old_map.get(template_id)
-                  prev_zip_path = os.path.join(prev_build_dir, 'templates', zip_name)
-                  
-                  reason = 'Unknown'
-                  should_rebuild = False
-                  
-                  if force_rebuild:
-                      should_rebuild = True; reason = 'Forced'
-                  elif not old_data:
-                      should_rebuild = True; reason = 'New'
-                  elif not os.path.exists(prev_zip_path):
-                      should_rebuild = True; reason = 'Missing Artifact'
-                  elif old_data.get('source_hash') != current_src_hash:
-                      should_rebuild = True; reason = 'Changed'
-                  else:
-                      reason = 'No Change'
 
-                  final_zip_hash = ''
-                  if should_rebuild:
-                      print(f'🔨 Building: {template_id} [{reason}]')
-                      shutil.make_archive(zip_output_path.replace('.zip', ''), 'zip', root_dir=template_path)
-                      h = hashlib.sha256()
-                      with open(zip_output_path, 'rb') as f:
-                          for chunk in iter(lambda: f.read(4096), b''): h.update(chunk)
-                      final_zip_hash = h.hexdigest()
-                  else:
-                      print(f'⏩ Skipping: {template_id} [Hash Match]')
-                      shutil.copy2(prev_zip_path, zip_output_path)
-                      final_zip_hash = old_data['sha256']
-
-                  meta_name = template; meta_user = 'Unknown'; meta_desc = 'No description.'
+                  # === 读取当前 case.json 中的版本 ===
+                  meta_name = template
+                  meta_user = 'Unknown'
+                  meta_desc = 'No description.'
+                  current_version = '0.0.1' # 默认版本
+                  
+                  case_path = os.path.join(template_path, 'case.json')
                   try:
-                      case_path = os.path.join(template_path, 'case.json')
                       if os.path.exists(case_path):
                           with open(case_path, 'r', encoding='utf-8') as cf:
                               c = json.load(cf)
                               meta_name = c.get('name', template)
                               meta_user = c.get('user', 'Unknown')
                               meta_desc = c.get('DESCRIPTION', 'No description.')
-                  except:
-                      if old_data:
-                          meta_name = old_data['metadata']['name']
-                          meta_user = old_data['metadata']['author']
-                          meta_desc = old_data['metadata']['description']
+                              current_version = c.get('version', '0.0.1')
+                  except Exception as e:
+                      print(f'⚠️ Error reading case.json for {template_id}: {e}')
 
+                  # === 核心逻辑：版本对比 ===
+                  should_rebuild = False
+                  reason = 'Unknown'
+                  
+                  # 获取旧版本信息
+                  old_data = old_map.get(template_id)
+                  prev_zip_path = os.path.join(prev_build_dir, 'templates', zip_name)
+                  
+                  if force_rebuild:
+                      should_rebuild = True; reason = 'Forced'
+                  elif not old_data:
+                      should_rebuild = True; reason = 'New Template'
+                  elif not os.path.exists(prev_zip_path):
+                      should_rebuild = True; reason = 'Missing Artifact'
+                  elif old_data.get('version') != current_version:
+                      # 关键判断：只有版本号不一致才重建
+                      should_rebuild = True
+                      reason = f'Version Upgrade ({old_data.get("version")} -> {current_version})'
+                  else:
+                      reason = 'Version Match'
+
+                  # === 执行动作 ===
+                  final_hash = ''
+                  
+                  if should_rebuild:
+                      print(f'🔨 Building: {template_id} [{reason}]')
+                      # 打包
+                      shutil.make_archive(zip_output_path.replace('.zip', ''), 'zip', root_dir=template_path)
+                      
+                      # 计算 Hash
+                      h = hashlib.sha256()
+                      with open(zip_output_path, 'rb') as f:
+                          for chunk in iter(lambda: f.read(4096), b''): h.update(chunk)
+                      final_hash = h.hexdigest()
+                  else:
+                      print(f'⏩ Skipping: {template_id} [{reason}]')
+                      # 直接复制旧文件
+                      shutil.copy2(prev_zip_path, zip_output_path)
+                      # 复用旧 Hash
+                      final_hash = old_data['sha256']
+
+                  # 添加到列表
                   new_templates.append({
-                      'id': template_id, 'provider': provider, 'slug': template,
+                      'id': template_id,
+                      'provider': provider,
+                      'slug': template,
                       'url': f'{base_url}/templates/{zip_name}',
-                      'sha256': final_zip_hash, 'source_hash': current_source_hash,
-                      'metadata': {'name': meta_name, 'author': meta_user, 'description': meta_desc}
+                      'version': current_version,
+                      'sha256': final_hash,
+                      'updated_at': datetime.datetime.utcnow().isoformat() + 'Z',
+                      'metadata': {
+                          'name': meta_name,
+                          'author': meta_user,
+                          'description': meta_desc
+                      }
                   })
 
-          manifest = {'updated_at': datetime.datetime.utcnow().isoformat() + 'Z', 'repo_name': repo_name, 'templates': new_templates}
+          # --- 保存 Index ---
+          manifest = {
+              'updated_at': datetime.datetime.utcnow().isoformat() + 'Z',
+              'repo_name': repo_name,
+              'templates': new_templates
+          }
+          
           with open(os.path.join(output_dir, 'index.json'), 'w', encoding='utf-8') as f:
               json.dump(manifest, f, indent=2, ensure_ascii=False)
-          print(f'✨ Build Complete.')
+          
+          print(f'✨ Build Complete. Total: {len(new_templates)}')
           "
 
-      # 4. 部署 (改用 peaceiris 插件，强制推送到 gh-pages 分支)
+      # 4. 部署 (必须使用 peaceiris/actions-gh-pages 以维持分支历史)
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages  # 显式指定分支名
+          publish_branch: gh-pages
           commit_message: "Deploy: ${{ github.event.head_commit.message }}"
