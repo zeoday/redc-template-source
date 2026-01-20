@@ -1,9 +1,15 @@
-name: Publish TF Templates
+name: Build and Deploy (Bash)
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force rebuild'
+        required: false
+        default: 'false'
+        type: boolean
 
 permissions:
   contents: read
@@ -11,76 +17,150 @@ permissions:
   id-token: write
 
 jobs:
-  package-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Source
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
-      - name: Package Templates and Generate Index
+      - name: Checkout Previous Build
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: previous_build
+          fetch-depth: 1
+        continue-on-error: true
+
+      - name: Build with Bash & jq
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild }}
         run: |
+          # --- 1. 初始化变量与环境 ---
           mkdir -p public/templates
+          # 复制前端页面
+          [ -f index.html ] && cp index.html public/index.html
+
+          BASE_URL="https://${REPO_OWNER}.github.io/${REPO_NAME}"
+          OUTPUT_JSON="public/index.json"
+          PREV_JSON="previous_build/index.json"
           
-          # 使用 Python 处理目录遍历、压缩和 JSON 生成
-          python3 -c "
-          import os
-          import json
-          import shutil
-          import hashlib
-          import datetime
+          # 初始化新的 JSON 结构
+          # 使用 jq -n 创建一个空对象
+          jq -n \
+            --arg date "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+            --arg repo "$REPO_NAME" \
+            '{updated_at: $date, repo_name: $repo, templates: []}' > "$OUTPUT_JSON"
 
-          base_url = 'https://redc.wgpsec.org/templates'
-          output_dir = 'public/templates'
-          repo_root = '.'
+          # --- 2. 遍历双层目录 ---
+          # 排除隐藏目录和 public
+          for provider in */ ; do
+            provider=${provider%/} # 去掉末尾斜杠
+            if [[ "$provider" == "public" || "$provider" == "previous_build" || "$provider" == .* ]]; then continue; fi
+
+            for template in "$provider"/*/ ; do
+              template=${template%/}
+              template_name=$(basename "$template")
+              
+              if [[ ! -d "$template" ]]; then continue; fi
+              
+              # 构造 ID 和 路径
+              id="${provider}/${template_name}"
+              zip_name="${provider}_${template_name}.zip"
+              zip_path="public/templates/$zip_name"
+              prev_zip_path="previous_build/templates/$zip_name"
+              
+              echo "🔍 Checking: $id"
+
+              # --- 3. 计算源码目录指纹 (Source Hash) ---
+              # find: 列出所有文件 -> sha256sum: 计算每个文件hash -> sha256sum: 计算总hash
+              # 这种方式极快且稳定
+              current_src_hash=$(find "$template" -type f -not -path '*/.*' -print0 | sort -z | xargs -0 sha256sum | sha256sum | awk '{print $1}')
+
+              # --- 4. 增量判断逻辑 ---
+              should_rebuild="true"
+              old_entry="null"
+              
+              # 尝试从旧 JSON 中读取该模版的信息
+              if [[ -f "$PREV_JSON" ]]; then
+                old_entry=$(jq --arg id "$id" '.templates[] | select(.id == $id)' "$PREV_JSON")
+              fi
+              
+              # 获取旧的 source_hash (如果存在)
+              old_src_hash=$(echo "$old_entry" | jq -r '.source_hash // empty')
+              
+              # 判断条件
+              if [[ "$FORCE_REBUILD" != "true" && -n "$old_src_hash" && "$old_src_hash" == "$current_src_hash" && -f "$prev_zip_path" ]]; then
+                should_rebuild="false"
+              fi
+
+              # --- 5. 执行构建或复用 ---
+              final_zip_hash=""
+              
+              if [[ "$should_rebuild" == "true" ]]; then
+                echo "   🔨 Building..."
+                # 这里的 cd 是为了让 zip 内部结构更干净，不包含 provider/template 父目录
+                # 如果你想 zip 包含 provider/template 结构，可以直接 zip -r ...
+                # 这里我们只打包模版内容：
+                (cd "$template" && zip -r -q "../../../$zip_path" .)
+                
+                final_zip_hash=$(sha256sum "$zip_path" | awk '{print $1}')
+              else
+                echo "   ⏩ Skipping (Cached)"
+                cp "$prev_zip_path" "$zip_path"
+                final_zip_hash=$(echo "$old_entry" | jq -r '.sha256')
+              fi
+
+              # --- 6. 读取 Metadata (case.json) ---
+              # 默认值
+              meta_name="$template_name"
+              meta_author="Unknown"
+              meta_desc="No description provided."
+              
+              case_file="$template/case.json"
+              if [[ -f "$case_file" ]]; then
+                # 验证 json 有效性，如果无效则回退默认
+                if jq -e . "$case_file" >/dev/null 2>&1; then
+                  meta_name=$(jq -r '.name // "'"$template_name"'"' "$case_file")
+                  meta_author=$(jq -r '.user // "Unknown"' "$case_file")
+                  meta_desc=$(jq -r '.DESCRIPTION // "No description provided."' "$case_file")
+                fi
+              fi
+
+              # --- 7. 更新 index.json ---
+              # 使用 jq 将新条目追加到 templates 数组中
+              # mktemp 用于创建临时文件，因为不能同时读写同一个文件
+              tmp=$(mktemp)
+              jq --arg id "$id" \
+                 --arg provider "$provider" \
+                 --arg slug "$template_name" \
+                 --arg url "$BASE_URL/templates/$zip_name" \
+                 --arg sha256 "$final_zip_hash" \
+                 --arg src_hash "$current_src_hash" \
+                 --arg name "$meta_name" \
+                 --arg author "$meta_author" \
+                 --arg desc "$meta_desc" \
+                 '.templates += [{
+                    id: $id,
+                    provider: $provider,
+                    slug: $slug,
+                    url: $url,
+                    sha256: $sha256,
+                    source_hash: $src_hash,
+                    metadata: {
+                      name: $name,
+                      author: $author,
+                      description: $desc
+                    }
+                 }]' "$OUTPUT_JSON" > "$tmp" && mv "$tmp" "$OUTPUT_JSON"
+                 
+            done
+          done
           
-          manifest = {
-              'updated_at': datetime.datetime.utcnow().isoformat() + 'Z',
-              'commit': '${{ github.sha }}',
-              'templates': {}
-          }
-
-          # 排除的文件/文件夹
-          exclude = {'.git', '.github', 'public', 'README.md', '.gitignore'}
-
-          # 遍历第一层 (云厂商, e.g., aws, alicloud)
-          for provider in os.listdir(repo_root):
-              provider_path = os.path.join(repo_root, provider)
-              if not os.path.isdir(provider_path) or provider in exclude:
-                  continue
-
-              # 遍历第二层 (模版名, e.g., ec2-c2)
-              for template in os.listdir(provider_path):
-                  template_path = os.path.join(provider_path, template)
-                  if not os.path.isdir(template_path):
-                      continue
-
-                  # 唯一的模版 ID，例如: aws/ec2-c2
-                  template_id = f'{provider}/{template}'
-                  zip_name = f'{provider}_{template}.zip'
-                  zip_output_path = os.path.join(output_dir, zip_name)
-
-                  # 1. 打包该模版文件夹
-                  shutil.make_archive(zip_output_path.replace('.zip', ''), 'zip', template_path)
-                  
-                  # 2. 计算 SHA256
-                  sha256_hash = hashlib.sha256()
-                  with open(zip_output_path, 'rb') as f:
-                      for byte_block in iter(lambda: f.read(4096), b''):
-                          sha256_hash.update(byte_block)
-                  
-                  # 3. 添加到 Manifest
-                  manifest['templates'][template_id] = {
-                      'provider': provider,
-                      'name': template,
-                      'url': f'{base_url}/{zip_name}',
-                      'sha256': sha256_hash.hexdigest()
-                  }
-                  print(f'Packaged: {template_id}')
-
-          # 写入 index.json 到 public 根目录
-          with open('public/index.json', 'w') as f:
-              json.dump(manifest, f, indent=2)
-          "
+          echo "🎉 Build Complete. Index generated at $OUTPUT_JSON"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
