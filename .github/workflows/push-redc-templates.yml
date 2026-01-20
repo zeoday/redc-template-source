@@ -87,7 +87,7 @@ jobs:
 
           # --- B. 遍历处理 ---
           repo_root = '.'
-          exclude = {'.git', '.github', 'public', 'previous_build', 'README.md', '.gitignore', 'index.html'}
+          exclude = {'.git', '.github', 'public', 'previous_build', '.gitignore', 'index.html'}
           
           # 标记本次构建是否有更新 (如果没有更新，甚至可以不提交 index.json，但为了更新时间戳还是提交吧)
           has_changes = False
@@ -111,7 +111,7 @@ jobs:
                               c = json.load(cf)
                               meta_name = c.get('name', template)
                               meta_user = c.get('user', 'Unknown')
-                              meta_desc = c.get('DESCRIPTION', 'No description.')
+                              meta_desc = c.get('description', 'No description.')
                               meta_version = c.get('version', '0.0.0')
                   except: pass
 
