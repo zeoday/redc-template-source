@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy (Branch Fix)
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       force_rebuild:
-        description: 'Force rebuild all templates'
+        description: 'Force rebuild'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
-  contents: read
+  contents: write  # <--- 必须改成 write，否则无法推送分支
   pages: write
   id-token: write
 
@@ -20,24 +20,33 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. 拉取源码
       - name: Checkout Source
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      # 拉取上次构建结果作为缓存
-      - name: Checkout Previous Build
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: previous_build
-          fetch-depth: 1
-        continue-on-error: true
+      # 2. 拉取缓存 (Safe)
+      - name: Checkout Previous Build (Safe)
+        run: |
+          echo "🔍 Checking for existing gh-pages branch..."
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "✅ Branch found. Cloning cache..."
+            git clone --depth=1 --branch=gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git previous_build
+          else
+            echo "⚠️ Branch 'gh-pages' not found (likely first run). Skipping cache."
+            mkdir -p previous_build
+          fi
 
-      - name: Smart Incremental Build
+      # 3. 执行构建
+      - name: Build with Python
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          FORCE_REBUILD: ${{ inputs.force_rebuild }}
         run: |
           mkdir -p public/templates
-          cp index.html public/index.html
+          [ -f index.html ] && cp index.html public/index.html
 
           python3 -c "
           import os
@@ -46,27 +55,22 @@ jobs:
           import hashlib
           import datetime
 
-          # --- 配置 ---
-          repo_owner = '${{ github.repository_owner }}'
-          repo_name = '${{ github.event.repository.name }}'
-          base_url = f'https://{repo_owner}.github.io/{repo_name}'
+          repo_owner = os.environ.get('REPO_OWNER')
+          repo_name = os.environ.get('REPO_NAME')
+          force_rebuild = os.environ.get('FORCE_REBUILD') == 'true'
           
+          base_url = f'https://{repo_owner}.github.io/{repo_name}'
           output_dir = 'public'
           templates_dir = os.path.join(output_dir, 'templates')
           prev_build_dir = 'previous_build'
           prev_index_path = os.path.join(prev_build_dir, 'index.json')
-          
-          force_rebuild = '${{ inputs.force_rebuild }}' == 'true'
 
-          # --- 核心函数: 计算目录内容的哈希 (指纹) ---
           def calculate_dir_hash(directory_path):
               sha256_hash = hashlib.sha256()
-              # os.walk 默认顺序不固定，必须 sorted 保证跨平台/跨次执行的一致性
               for root, dirs, files in os.walk(directory_path):
-                  dirs.sort()  # 保证遍历目录顺序
+                  dirs.sort()
                   for filename in sorted(files):
-                      # 排除 case.json 变动是否影响打包? 通常 case.json 变了也要更新 metadata
-                      # 如果想排除某些文件不参与指纹计算，可以在这里 if continue
+                      if filename.startswith('.'): continue
                       filepath = os.path.join(root, filename)
                       try:
                           with open(filepath, 'rb') as f:
@@ -77,7 +81,6 @@ jobs:
                       except: pass
               return sha256_hash.hexdigest()
 
-          # --- 1. 加载旧数据 ---
           old_map = {}
           if os.path.exists(prev_index_path) and not force_rebuild:
               try:
@@ -88,130 +91,89 @@ jobs:
                   print(f'📦 Loaded history for {len(old_map)} templates.')
               except: pass
 
-          # --- 2. 遍历与处理 ---
           new_templates = []
           repo_root = '.'
           exclude = {'.git', '.github', 'public', 'previous_build', 'README.md', '.gitignore', 'index.html'}
 
+          if not os.path.exists(templates_dir): os.makedirs(templates_dir)
+
           for provider in sorted(os.listdir(repo_root)):
               provider_path = os.path.join(repo_root, provider)
-              if not os.path.isdir(provider_path) or provider in exclude:
-                  continue
+              if not os.path.isdir(provider_path) or provider in exclude: continue
 
               for template in sorted(os.listdir(provider_path)):
                   template_path = os.path.join(provider_path, template)
-                  if not os.path.isdir(template_path):
-                      continue
+                  if not os.path.isdir(template_path): continue
 
                   template_id = f'{provider}/{template}'
                   zip_name = f'{provider}_{template}.zip'
                   zip_output_path = os.path.join(templates_dir, zip_name)
                   
-                  # A. 计算当前源码的指纹
-                  current_source_hash = calculate_dir_hash(template_path)
+                  current_src_hash = calculate_dir_hash(template_path)
                   
-                  # B. 检查是否需要构建
-                  # 规则: 强制构建 OR 旧数据里没有 OR 指纹变了 OR 旧ZIP文件丢了
-                  should_rebuild = False
                   old_data = old_map.get(template_id)
-                  
-                  # 检查旧 ZIP 是否真的存在 (防止缓存损坏)
                   prev_zip_path = os.path.join(prev_build_dir, 'templates', zip_name)
-                  prev_zip_exists = os.path.exists(prev_zip_path)
-
+                  
+                  reason = 'Unknown'
+                  should_rebuild = False
+                  
                   if force_rebuild:
-                      should_rebuild = True
-                      reason = 'Forced'
+                      should_rebuild = True; reason = 'Forced'
                   elif not old_data:
-                      should_rebuild = True
-                      reason = 'New Template'
-                  elif not prev_zip_exists:
-                      should_rebuild = True
-                      reason = 'Missing Artifact'
-                  elif old_data.get('source_hash') != current_source_hash:
-                      should_rebuild = True
-                      reason = 'Content Changed'
+                      should_rebuild = True; reason = 'New'
+                  elif not os.path.exists(prev_zip_path):
+                      should_rebuild = True; reason = 'Missing Artifact'
+                  elif old_data.get('source_hash') != current_src_hash:
+                      should_rebuild = True; reason = 'Changed'
                   else:
                       reason = 'No Change'
 
-                  # C. 执行操作
                   final_zip_hash = ''
-                  
                   if should_rebuild:
                       print(f'🔨 Building: {template_id} [{reason}]')
-                      # 打包
-                      shutil.make_archive(zip_output_path.replace('.zip', ''), 'zip', template_path)
-                      
-                      # 计算 ZIP Hash (用于下载校验)
+                      shutil.make_archive(zip_output_path.replace('.zip', ''), 'zip', root_dir=template_path)
                       h = hashlib.sha256()
                       with open(zip_output_path, 'rb') as f:
-                          for chunk in iter(lambda: f.read(4096), b''):
-                              h.update(chunk)
+                          for chunk in iter(lambda: f.read(4096), b''): h.update(chunk)
                       final_zip_hash = h.hexdigest()
-                      
                   else:
                       print(f'⏩ Skipping: {template_id} [Hash Match]')
-                      # 复制旧 ZIP
                       shutil.copy2(prev_zip_path, zip_output_path)
-                      # 复用旧的 ZIP Hash
                       final_zip_hash = old_data['sha256']
 
-                  # D. 读取元数据 (case.json)
-                  # 即使没重新打包，也重新读一下 case.json 比较好吗？
-                  # 为了性能，如果没重建，直接复用旧 metadata 也可以。
-                  # 但如果只改了 case.json 的描述，指纹会变，这里就会走进 should_rebuild，所以逻辑是自洽的。
-                  
-                  meta_name = template
-                  meta_user = 'Unknown'
-                  meta_desc = 'No description.'
-                  
-                  # 尝试读取本地 case.json (最新的)
+                  meta_name = template; meta_user = 'Unknown'; meta_desc = 'No description.'
                   try:
-                      with open(os.path.join(template_path, 'case.json'), 'r', encoding='utf-8') as cf:
-                          c = json.load(cf)
-                          meta_name = c.get('name', template)
-                          meta_user = c.get('user', 'Unknown')
-                          meta_desc = c.get('DESCRIPTION', 'No description.')
+                      case_path = os.path.join(template_path, 'case.json')
+                      if os.path.exists(case_path):
+                          with open(case_path, 'r', encoding='utf-8') as cf:
+                              c = json.load(cf)
+                              meta_name = c.get('name', template)
+                              meta_user = c.get('user', 'Unknown')
+                              meta_desc = c.get('DESCRIPTION', 'No description.')
                   except:
-                      # 如果读取失败（比如 JSON 格式错误），尝试回退到旧数据
                       if old_data:
                           meta_name = old_data['metadata']['name']
                           meta_user = old_data['metadata']['author']
                           meta_desc = old_data['metadata']['description']
 
-                  # E. 添加到新列表
                   new_templates.append({
-                      'id': template_id,
-                      'provider': provider,
-                      'slug': template,
+                      'id': template_id, 'provider': provider, 'slug': template,
                       'url': f'{base_url}/templates/{zip_name}',
-                      'sha256': final_zip_hash,       # ZIP 文件的 hash
-                      'source_hash': current_source_hash, # 源码目录的指纹 (内部逻辑用)
-                      'metadata': {
-                          'name': meta_name,
-                          'author': meta_user,
-                          'description': meta_desc
-                      }
+                      'sha256': final_zip_hash, 'source_hash': current_source_hash,
+                      'metadata': {'name': meta_name, 'author': meta_user, 'description': meta_desc}
                   })
 
-          # --- 3. 保存 ---
-          manifest = {
-              'updated_at': datetime.datetime.utcnow().isoformat() + 'Z',
-              'repo_name': repo_name,
-              'templates': new_templates
-          }
-          
+          manifest = {'updated_at': datetime.datetime.utcnow().isoformat() + 'Z', 'repo_name': repo_name, 'templates': new_templates}
           with open(os.path.join(output_dir, 'index.json'), 'w', encoding='utf-8') as f:
               json.dump(manifest, f, indent=2, ensure_ascii=False)
-          
-          print('✨ Smart Build Complete.')
+          print(f'✨ Build Complete.')
           "
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      # 4. 部署 (改用 peaceiris 插件，强制推送到 gh-pages 分支)
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: 'public'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages  # 显式指定分支名
+          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
