@@ -51,8 +51,8 @@ sudo echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sudo sysctl -p
 
 sudo apt-get -y install unzip
-sudo wget -O simplehttpserver_0.0.5_linux_amd64.tar.gz 'https://这里替换成你自己的静态下载地址'
-sudo tar -zxvf simplehttpserver_0.0.5_linux_amd64.tar.gz
+sudo wget -O simplehttpserver_0.0.6_linux_amd64.zip '${var.github_proxy}/projectdiscovery/simplehttpserver/releases/download/v0.0.6/simplehttpserver_0.0.6_linux_amd64.zip'
+sudo unzip simplehttpserver_0.0.6_linux_amd64.zip
 sudo mv --force simplehttpserver /usr/local/bin/simplehttpserver
 sudo chmod +x /usr/local/bin/simplehttpserver
 
@@ -61,11 +61,11 @@ sudo apt-get install -y "mingw-w64"
 sudo apt-get install -y "binutils-mingw-w64"
 sudo apt-get install -y "g++-mingw-w64"
 
-sudo wget -O sliver-server_linux 'https://这里替换成你自己的静态下载地址'
+sudo wget -O sliver-server_linux '${var.github_proxy}/BishopFox/sliver/releases/download/v1.6.6/sliver-server_linux-amd64'
 sudo mv --force sliver-server_linux /root/sliver-server && chmod 755 /root/sliver-server
 sudo /root/sliver-server unpack --force
 
-sudo wget -O sliver-client_linux 'https://这里替换成你自己的静态下载地址'
+sudo wget -O sliver-client_linux '${var.github_proxy}/BishopFox/sliver/releases/download/v1.6.6/sliver-client_linux-amd64'
 sudo mv --force sliver-client_linux /root/sliver-client && chmod 755 /root/sliver-client
 
 sudo echo "W1VuaXRdCkRlc2NyaXB0aW9uPVNsaXZlcgpBZnRlcj1uZXR3b3JrLnRhcmdldApTdGFydExpbWl0SW50ZXJ2YWxTZWM9MAoKW1NlcnZpY2VdClR5cGU9c2ltcGxlClJlc3RhcnQ9b24tZmFpbHVyZQpSZXN0YXJ0U2VjPTMKVXNlcj1yb290CkV4ZWNTdGFydD0vcm9vdC9zbGl2ZXItc2VydmVyIGRhZW1vbgoKW0luc3RhbGxdCldhbnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0" | base64 -d > /etc/systemd/system/sliver.service
