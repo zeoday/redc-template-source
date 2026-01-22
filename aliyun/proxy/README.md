@@ -5,16 +5,16 @@
 
 拉取
 ```
-redc pull aliyun/aliyun-proxy
+redc pull aliyun/proxy
 ```
 
 开启
 ```
 # 默认 10 台
-redc run aliyun/aliyun-proxy
+redc run aliyun/proxy
 
 # 自定义节点数量,比如开 50 个节点
-redc run aliyun/aliyun-proxy -node 50
+redc run aliyun/proxy -node 50
 ```
 
 查询

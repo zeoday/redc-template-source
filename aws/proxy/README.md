@@ -5,16 +5,16 @@
 
 拉取
 ```
-redc pull aws/aws-proxy
+redc pull aws/proxy
 ```
 
 开启
 ```
 # 默认 10 台
-redc run aws/aws-proxy
+redc run aws/proxy
 
 # 自定义节点数量,比如开 50 个节点
-redc run aws/aws-proxy -node 50
+redc run aws/proxy -node 50
 ```
 
 查询
