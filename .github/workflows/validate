@@ -1,0 +1,163 @@
+name: CI - Strict Validator
+
+on:
+  push:
+    branches: [ "master" ]
+    paths-ignore:
+      - 'public/**'
+      - 'index.html'
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  validate:
+    name: Validate Standards
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "latest"
+
+      - name: Run Validation Script
+        run: |
+          python3 -c "
+          import os
+          import json
+          import sys
+          import subprocess
+
+          # ==========================================
+          #               配置区域
+          # ==========================================
+          
+          # 定义 case.json 中必须存在的核心字段
+          # key: 字段名 (区分大小写)
+          # value: 报错时显示的描述
+          
+          REQUIRED_FIELDS = {
+              'name':        '模版名称 (name)',
+              'user':        '作者 (user)',
+              'version':     '版本号 (version)',
+              'description': '描述信息 (description)'
+          }
+
+          # 忽略的目录和文件
+          repo_root = '.'
+          exclude_dirs = {'.git', '.github', 'public', 'previous_build', '__pycache__'}
+          
+          # ==========================================
+          #               主校验逻辑
+          # ==========================================
+
+          has_error = False
+          print('🔍 Starting Strict Validation...')
+          print(f'ℹ️  Enforcing required fields: {list(REQUIRED_FIELDS.keys())}')
+          print(f'ℹ️  Extra fields in case.json are allowed.')
+          print('=' * 60)
+
+          for provider in sorted(os.listdir(repo_root)):
+              provider_path = os.path.join(repo_root, provider)
+              if not os.path.isdir(provider_path) or provider in exclude_dirs:
+                  continue
+
+              for template in sorted(os.listdir(provider_path)):
+                  template_path = os.path.join(provider_path, template)
+                  if not os.path.isdir(template_path): continue
+
+                  template_id = f'{provider}/{template}'
+                  current_files = set(os.listdir(template_path))
+                  
+                  # -------------------------------------------------
+                  # Check 1: README.md (严格大写检查)
+                  # -------------------------------------------------
+                  if 'README.md' not in current_files:
+                      # 检查是否误写成了小写
+                      lower_files = [f.lower() for f in current_files]
+                      if 'readme.md' in lower_files:
+                          print(f'❌ [FILE] {template_id}: Found lowercase readme.md. MUST be CAPS: README.md')
+                      else:
+                          print(f'❌ [FILE] {template_id}: Missing required file: README.md')
+                      has_error = True
+
+                  # -------------------------------------------------
+                  # Check 2: case.json (核心字段与类型检查)
+                  # -------------------------------------------------
+                  case_path = os.path.join(template_path, 'case.json')
+                  if 'case.json' not in current_files:
+                      print(f'❌ [FILE] {template_id}: Missing required file: case.json')
+                      has_error = True
+                  else:
+                      try:
+                          with open(case_path, 'r', encoding='utf-8') as f:
+                              data = json.load(f)
+                              
+                              # [2.1] 检查核心字段是否缺失
+                              # 只要 REQUIRED_FIELDS 里的都有就行，多余的字段不影响
+                              missing = [k for k in REQUIRED_FIELDS if k not in data]
+                              
+                              if missing:
+                                  # 智能提示：如果发现了旧的大写 DESCRIPTION
+                                  if 'description' in missing and 'DESCRIPTION' in data:
+                                      print(f'❌ [JSON] {template_id}: Found legacy key \"DESCRIPTION\". Please rename to lowercase \"description\"')
+                                  else:
+                                      desc_list = [REQUIRED_FIELDS[k] for k in missing]
+                                      print(f'❌ [JSON] {template_id}: Missing required fields: {desc_list}')
+                                  has_error = True
+                              else:
+                                  # [2.2] 字段内容合规性检查
+                                  
+                                  # Check: Name (非空)
+                                  if not data['name'] or str(data['name']).strip() == '':
+                                      print(f'❌ [JSON] {template_id}: Field "name" cannot be empty')
+                                      has_error = True
+
+                                  # Check: User (非空)
+                                  if not data['user'] or str(data['user']).strip() == '':
+                                      print(f'❌ [JSON] {template_id}: Field "user" cannot be empty')
+                                      has_error = True
+
+                                  # Check: Description (非空)
+                                  if not data['description'] or str(data['description']).strip() == '':
+                                      print(f'❌ [JSON] {template_id}: Field "description" cannot be empty')
+                                      has_error = True
+
+                                  # Check: Version (必须是字符串且非空)
+                                  ver = data['version']
+                                  if not isinstance(ver, str):
+                                      print(f'❌ [JSON] {template_id}: "version" must be a STRING (e.g. \"1.0.1\"), found type: {type(ver).__name__}')
+                                      has_error = True
+                                  elif ver.strip() == '':
+                                      print(f'❌ [JSON] {template_id}: Field "version" cannot be empty')
+                                      has_error = True
+
+                      except json.JSONDecodeError as e:
+                          print(f'❌ [JSON] {template_id}: case.json is invalid JSON! Error: {e}')
+                          has_error = True
+
+                  # -------------------------------------------------
+                  # Check 3: Terraform 格式 (fmt -check)
+                  # -------------------------------------------------
+                  has_tf = any(f.endswith('.tf') for f in current_files)
+                  if has_tf:
+                      result = subprocess.run(
+                          ['terraform', 'fmt', '-check', template_path],
+                          stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE,
+                          text=True
+                      )
+                      if result.returncode != 0:
+                          print(f'❌ [TF] {template_id}: Terraform files not formatted. Run "terraform fmt" locally.')
+                          has_error = True
+
+          print('=' * 60)
+          if has_error:
+              print('🚫 CHECK FAILED. Please fix the errors above.')
+              sys.exit(1)
+          else:
+              print('✅ ALL CHECKS PASSED. Ready to merge.')
+              sys.exit(0)
+          "
