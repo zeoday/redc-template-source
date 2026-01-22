@@ -10,7 +10,7 @@ redc pull aws/interactsh
 
 开启
 ```
-redc run aws/interactsh -domain dnslog.com
+redc run aws/interactsh -e domain=dnslog.com
 
 # domain 是你的 dnslog 域名
 ```
@@ -68,12 +68,9 @@ launch_template {
 # NS a ns1.dnslog.com
 ```
 
-**deploy.sh 配置**
+**redc config.yaml 配置**
 
-CFAddRecords 传参中的 cf 的 邮箱 和 accesskey
-```
-CFAddRecords "你的 cf 邮箱" "你的 cf accesskey" $2 "ns1.$2" "$ecs_ip"
-```
+config.yaml 中配置你的 cf 的 邮箱 和 accesskey
 
 若启动场景报错，可能原因
 1. 未替换 main.tf 中的 launch_template id 值
