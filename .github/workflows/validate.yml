@@ -34,10 +34,6 @@ jobs:
           #               配置区域
           # ==========================================
           
-          # 定义 case.json 中必须存在的核心字段
-          # key: 字段名 (区分大小写)
-          # value: 报错时显示的描述
-          
           REQUIRED_FIELDS = {
               'name':        '模版名称 (name)',
               'user':        '作者 (user)',
@@ -45,7 +41,6 @@ jobs:
               'description': '描述信息 (description)'
           }
 
-          # 忽略的目录和文件
           repo_root = '.'
           exclude_dirs = {'.git', '.github', 'public', 'previous_build', '__pycache__'}
           
@@ -56,7 +51,6 @@ jobs:
           has_error = False
           print('🔍 Starting Strict Validation...')
           print(f'ℹ️  Enforcing required fields: {list(REQUIRED_FIELDS.keys())}')
-          print(f'ℹ️  Extra fields in case.json are allowed.')
           print('=' * 60)
 
           for provider in sorted(os.listdir(repo_root)):
@@ -75,7 +69,6 @@ jobs:
                   # Check 1: README.md (严格大写检查)
                   # -------------------------------------------------
                   if 'README.md' not in current_files:
-                      # 检查是否误写成了小写
                       lower_files = [f.lower() for f in current_files]
                       if 'readme.md' in lower_files:
                           print(f'❌ [FILE] {template_id}: Found lowercase readme.md. MUST be CAPS: README.md')
@@ -96,12 +89,11 @@ jobs:
                               data = json.load(f)
                               
                               # [2.1] 检查核心字段是否缺失
-                              # 只要 REQUIRED_FIELDS 里的都有就行，多余的字段不影响
                               missing = [k for k in REQUIRED_FIELDS if k not in data]
                               
                               if missing:
-                                  # 智能提示：如果发现了旧的大写 DESCRIPTION
                                   if 'description' in missing and 'DESCRIPTION' in data:
+                                      # 注意：这里的双引号已转义 \"
                                       print(f'❌ [JSON] {template_id}: Found legacy key \"DESCRIPTION\". Please rename to lowercase \"description\"')
                                   else:
                                       desc_list = [REQUIRED_FIELDS[k] for k in missing]
@@ -110,28 +102,28 @@ jobs:
                               else:
                                   # [2.2] 字段内容合规性检查
                                   
-                                  # Check: Name (非空)
+                                  # Check: Name
                                   if not data['name'] or str(data['name']).strip() == '':
-                                      print(f'❌ [JSON] {template_id}: Field "name" cannot be empty')
+                                      print(f'❌ [JSON] {template_id}: Field \"name\" cannot be empty')
                                       has_error = True
 
-                                  # Check: User (非空)
+                                  # Check: User
                                   if not data['user'] or str(data['user']).strip() == '':
-                                      print(f'❌ [JSON] {template_id}: Field "user" cannot be empty')
+                                      print(f'❌ [JSON] {template_id}: Field \"user\" cannot be empty')
                                       has_error = True
 
-                                  # Check: Description (非空)
+                                  # Check: Description
                                   if not data['description'] or str(data['description']).strip() == '':
-                                      print(f'❌ [JSON] {template_id}: Field "description" cannot be empty')
+                                      print(f'❌ [JSON] {template_id}: Field \"description\" cannot be empty')
                                       has_error = True
 
-                                  # Check: Version (必须是字符串且非空)
+                                  # Check: Version
                                   ver = data['version']
                                   if not isinstance(ver, str):
-                                      print(f'❌ [JSON] {template_id}: "version" must be a STRING (e.g. \"1.0.1\"), found type: {type(ver).__name__}')
+                                      print(f'❌ [JSON] {template_id}: \"version\" must be a STRING (e.g. \"1.0.1\"), found type: {type(ver).__name__}')
                                       has_error = True
                                   elif ver.strip() == '':
-                                      print(f'❌ [JSON] {template_id}: Field "version" cannot be empty')
+                                      print(f'❌ [JSON] {template_id}: Field \"version\" cannot be empty')
                                       has_error = True
 
                       except json.JSONDecodeError as e:
@@ -150,7 +142,7 @@ jobs:
                           text=True
                       )
                       if result.returncode != 0:
-                          print(f'❌ [TF] {template_id}: Terraform files not formatted. Run "terraform fmt" locally.')
+                          print(f'❌ [TF] {template_id}: Terraform files not formatted. Run \"terraform fmt\" locally.')
                           has_error = True
 
           print('=' * 60)
