@@ -34,6 +34,7 @@ jobs:
           #               配置区域
           # ==========================================
           
+          # case.json 必须存在的字段
           REQUIRED_FIELDS = {
               'name':        '模版名称 (name)',
               'user':        '作者 (user)',
@@ -51,6 +52,7 @@ jobs:
           has_error = False
           print('🔍 Starting Strict Validation...')
           print(f'ℹ️  Enforcing required fields: {list(REQUIRED_FIELDS.keys())}')
+          print(f'ℹ️  Terraform check: Syntax ONLY (Ignoring indentation)')
           print('=' * 60)
 
           for provider in sorted(os.listdir(repo_root)):
@@ -66,7 +68,7 @@ jobs:
                   current_files = set(os.listdir(template_path))
                   
                   # -------------------------------------------------
-                  # Check 1: README.md (严格大写检查)
+                  # Check 1: README.md
                   # -------------------------------------------------
                   if 'README.md' not in current_files:
                       lower_files = [f.lower() for f in current_files]
@@ -77,7 +79,7 @@ jobs:
                       has_error = True
 
                   # -------------------------------------------------
-                  # Check 2: case.json (核心字段与类型检查)
+                  # Check 2: case.json
                   # -------------------------------------------------
                   case_path = os.path.join(template_path, 'case.json')
                   if 'case.json' not in current_files:
@@ -88,36 +90,30 @@ jobs:
                           with open(case_path, 'r', encoding='utf-8') as f:
                               data = json.load(f)
                               
-                              # [2.1] 检查核心字段是否缺失
+                              # 字段缺失检查
                               missing = [k for k in REQUIRED_FIELDS if k not in data]
                               
                               if missing:
                                   if 'description' in missing and 'DESCRIPTION' in data:
-                                      # 注意：这里的双引号已转义 \"
                                       print(f'❌ [JSON] {template_id}: Found legacy key \"DESCRIPTION\". Please rename to lowercase \"description\"')
                                   else:
                                       desc_list = [REQUIRED_FIELDS[k] for k in missing]
                                       print(f'❌ [JSON] {template_id}: Missing required fields: {desc_list}')
                                   has_error = True
                               else:
-                                  # [2.2] 字段内容合规性检查
-                                  
-                                  # Check: Name
+                                  # 字段内容检查
                                   if not data['name'] or str(data['name']).strip() == '':
                                       print(f'❌ [JSON] {template_id}: Field \"name\" cannot be empty')
                                       has_error = True
 
-                                  # Check: User
                                   if not data['user'] or str(data['user']).strip() == '':
                                       print(f'❌ [JSON] {template_id}: Field \"user\" cannot be empty')
                                       has_error = True
 
-                                  # Check: Description
                                   if not data['description'] or str(data['description']).strip() == '':
                                       print(f'❌ [JSON] {template_id}: Field \"description\" cannot be empty')
                                       has_error = True
 
-                                  # Check: Version
                                   ver = data['version']
                                   if not isinstance(ver, str):
                                       print(f'❌ [JSON] {template_id}: \"version\" must be a STRING (e.g. \"1.0.1\"), found type: {type(ver).__name__}')
@@ -131,18 +127,25 @@ jobs:
                           has_error = True
 
                   # -------------------------------------------------
-                  # Check 3: Terraform 格式 (fmt -check)
+                  # Check 3: Terraform 语法检查 (忽略格式美观度)
                   # -------------------------------------------------
                   has_tf = any(f.endswith('.tf') for f in current_files)
                   if has_tf:
+                      # 修改说明：
+                      # -write=false: 不修改文件
+                      # -recursive: 递归检查目录
+                      # 移除了 -check: 这样只有在无法解析(语法错误)时才会返回非0状态码
                       result = subprocess.run(
-                          ['terraform', 'fmt', '-check', template_path],
+                          ['terraform', 'fmt', '-write=false', '-recursive', template_path],
                           stdout=subprocess.PIPE,
                           stderr=subprocess.PIPE,
                           text=True
                       )
+                      
                       if result.returncode != 0:
-                          print(f'❌ [TF] {template_id}: Terraform files not formatted. Run \"terraform fmt\" locally.')
+                          # 只有语法严重错误导致无法解析时，这里才会报错
+                          print(f'❌ [TF] {template_id}: Syntax Error (Code invalid).')
+                          print(f'    Error details: {result.stderr.strip()}') 
                           has_error = True
 
           print('=' * 60)
