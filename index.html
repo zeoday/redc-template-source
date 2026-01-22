@@ -102,6 +102,7 @@
 
     <div class="fixed top-6 right-6 z-40 flex gap-3">
         <button id="lang-switcher" onclick="toggleLanguage()"
+           aria-label="Switch language"
            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#151725]/90 border border-slate-700 text-slate-200 hover:text-white hover:border-primary-500/60 hover:bg-slate-800/90 shadow-lg shadow-primary-500/10 transition">
             <i data-lucide="languages" class="w-4 h-4"></i>
             <span class="text-sm font-semibold" id="lang-text">EN</span>
@@ -166,8 +167,7 @@
                 </div>
                 <input type="text" id="search-input" 
                     class="block w-full pl-11 pr-4 py-4 bg-[#151725]/90 backdrop-blur-md border border-slate-700 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all shadow-xl"
-                    data-i18n-placeholder="search_placeholder"
-                    placeholder="搜索模版、云厂商、作者 (例如: aws c2 r0fus0d)...">
+                    data-i18n-placeholder="search_placeholder">
                 <div class="absolute inset-y-0 right-0 pr-4 flex items-center">
                     <span id="result-count" class="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded-md hidden">0 items</span>
                 </div>
@@ -272,7 +272,8 @@
                 copied: '命令已复制到剪贴板',
                 docs: '文档',
                 download_zip: '下载 ZIP',
-                no_readme: '> *该模版暂无详细文档 (README.md)*'
+                no_readme: '> *该模版暂无详细文档 (README.md)*',
+                no_readme_fallback: '> *暂无文档*'
             },
             'en': {
                 github_repo: 'GitHub Repo',
@@ -290,7 +291,8 @@
                 copied: 'Command copied to clipboard',
                 docs: 'Docs',
                 download_zip: 'Download ZIP',
-                no_readme: '> *This template has no detailed documentation (README.md)*'
+                no_readme: '> *This template has no detailed documentation (README.md)*',
+                no_readme_fallback: '> *No documentation available*'
             }
         };
 
@@ -304,7 +306,8 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    // Only hero_description contains safe HTML (<br>), use textContent for all others
+                    // Only hero_description contains safe HTML (<br>) that we control
+                    // The content comes from our own translations object, not user input
                     if (key === 'hero_description') {
                         el.innerHTML = translations[lang][key];
                     } else {
@@ -549,7 +552,7 @@
             `;
             
             // 解析 Markdown (使用 DOMPurify 防止 XSS)
-            const readmeRaw = meta.readme || (translations[currentLang]?.no_readme || '> *No documentation available*');
+            const readmeRaw = meta.readme || (translations[currentLang]?.no_readme || translations['zh-CN'].no_readme_fallback);
             const htmlContent = DOMPurify.sanitize(marked.parse(readmeRaw));
             document.getElementById('markdown-content').innerHTML = htmlContent;
             
