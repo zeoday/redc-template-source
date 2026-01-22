@@ -13,8 +13,8 @@ redc pull aws/proxy
 # 默认 10 台
 redc run aws/proxy
 
-# 自定义节点数量,比如开 50 个节点
-redc run aws/proxy -node 50
+# 通过 -e 参数，进行自定义节点数量,比如开 10 个节点
+redc run aws/proxy -e node=10
 ```
 
 查询
