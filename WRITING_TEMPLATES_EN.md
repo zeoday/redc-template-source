@@ -25,20 +25,20 @@ This guide shows how to write templates for the redc engine (https://github.com/
   - Store non-sensitive defaults (ports, filenames). Do not store AKSK/keys.
 - `outputs.tf`
   - Output data redc or users need: public IP/DNS, generated filenames, storage URLs, etc. (see [aws/ec2/outputs.tf](aws/ec2/outputs.tf)).
-- `deploy.sh`
+- `deploy.sh` (optional)
   - Provide `-init/-start/-stop/-status` wrapping `terraform init/apply/destroy/output` for standalone use (see [aws/ec2/deploy.sh](aws/ec2/deploy.sh)).
 
 ## redc Integration Notes
 - Scene path equals redc command argument: `redc pull aliyun/proxy`, `redc run aws/ec2`.
 - For extra automation (e.g., generate Clash config, upload to R2), set `redc_module` in `case.json` and expose needed vars/outputs in Terraform.
-- Runtime static assets can be fetched via `github_proxy` URLs defined in the template; execution artifacts can be uploaded via redc's `upload_r2` module.
+- For mainland/China use cases, runtime assets can be fetched via `github_proxy` links defined in the template; for overseas use, direct GitHub links are fine. Execution artifacts can be uploaded via redc's `upload_r2` module.
 
 ## Suggested Authoring Flow
 1) Create `cloud/scene` directory and add the file skeleton.
 2) Write `main.tf` and `variables.tf`; ensure `terraform init` succeeds locally.
 3) Write `README.md`, stressing required/optional parameters and common issues.
 4) Add `outputs.tf` so redc can read key data.
-5) If scripting is desired, write `deploy.sh` and keep it aligned with README.
+5) If scripting is desired, write `deploy.sh` and keep it aligned with README (optional).
 6) Local validation: `terraform validate`, then trial `terraform apply -auto-approve` with test account/low spec; confirm destroy works.
 
 ## Best Practices and Cautions

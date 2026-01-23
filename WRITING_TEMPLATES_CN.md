@@ -25,20 +25,20 @@
   - 放非敏感默认值（如端口、文件名），不要写入 AKSK/密钥。
 - `outputs.tf`
   - 输出 redc 或用户可能用到的信息：公网 IP/DNS、生成文件名、存储地址等（示例 [aws/ec2/outputs.tf](aws/ec2/outputs.tf)）。
-- `deploy.sh`
+- `deploy.sh` (非强制，可不写)
   - 提供 `-init/-start/-stop/-status` 封装 `terraform init/apply/destroy/output`，便于不依赖 redc 直接使用（示例 [aws/ec2/deploy.sh](aws/ec2/deploy.sh)）。
 
 ## redc 集成要点
 - 场景路径即 redc 命令参数：`redc pull aliyun/proxy`，`redc run aws/ec2`。
 - 需要额外自动化（如生成 Clash 配置、上传 R2）时，在 `case.json` 写 `redc_module`，并在 Terraform/outputs 中暴露必要变量和结果。
-- 运行时静态资源可通过模板里的 `github_proxy` 链接下载；运行结果上传可由 redc 的 `upload_r2` 模块处理。
+- 国内场景运行时静态资源可通过模板里的 `github_proxy` 链接加速下载；国外场景可直接从 github 直链下载，运行结果上传可由 redc 的 `upload_r2` 模块处理。
 
 ## 编写流程（推荐）
 1) 创建目录 `cloud/scene` 并放置必备文件骨架。
 2) 编写 `main.tf` 和 `variables.tf`，先确保本地 `terraform init` 成功。
 3) 写 `README.md`，强调必填/可选参数与常见问题。
 4) 补充 `outputs.tf`，让 redc 能读到关键数据。
-5) 如需脚本化，写好 `deploy.sh` 并与 README 一致。
+5) 如需脚本化，写好 `deploy.sh` 并与 README 一致。 (非强制，可不写)
 6) 本地验证：`terraform validate`，再试跑 `terraform apply -auto-approve`（使用测试账户/低配实例），确认 destroy 也正常。
 
 ## 最佳实践与注意事项
