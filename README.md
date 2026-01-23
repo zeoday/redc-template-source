@@ -1,41 +1,47 @@
 # redc-template
 
-https://github.com/wgpsec/redc 要用到的 tf 模板
+[中文](README_CN.md) | English
 
-## 分类解释
+Terraform template repository used by the https://github.com/wgpsec/redc engine
 
-暂时按照各个云来分类
+Template writing guide (English): [WRITING_TEMPLATES_EN.md](WRITING_TEMPLATES_EN.md)
 
-- aliyun 为 阿里云 上的各个场景
-- aws 为 亚马逊云 上的各个场景
-- tencent 为 腾讯云 上的各个场景
-- vultr 为 vultr云 上的场景 (不是很推荐了,要用不如用 aws)
+## Category Explanation
 
-还有 华为云、火山等等后续慢慢补充
+Classified by cloud providers
 
-## 需要准备什么
+- aliyun: Various scenarios on Alibaba Cloud
+- aws: Various scenarios on Amazon Web Services
+- tencent: Various scenarios on Tencent Cloud
+- vultr: Scenarios on Vultr Cloud (not recommended, better to use AWS)
 
-阿里云
-- aksk (要有能开机器、vpc、vswitch、安全组的权限,嫌麻烦就弄高权限)
+More cloud providers like Huawei Cloud, Volcano Engine, etc. will be added gradually
 
-腾讯云
-- aksk (同上)
+## Prerequisites
 
-aws
-- aksk (同上)
-- launch_template id (启动模板 id,就是你自己去控制台建个启动模板，然后复制下 id 替换我tf模板里的 id 即可)
-- 你自己aws控制台生成的 ssh 密钥,保存好到本地
+Alibaba Cloud
+- aksk (requires permissions to create instances, VPC, vswitch, and security groups. Use high permissions if you want to avoid complexity)
 
-vultr (不推荐使用)
-- aksk (同上)
+Tencent Cloud
+- aksk (same as above)
 
-## 如何使用
+AWS
+- aksk (same as above)
+- launch_template id (Launch template ID. Create a launch template in the AWS console, copy the ID, and replace the ID in the Terraform template)
+- SSH key generated in your AWS console, save it locally
 
-推荐配合 redc 工具使用
+Vultr (not recommended)
+- aksk (same as above)
+
+## How to Use
+
+Recommended to use with the redc tool
 - https://github.com/wgpsec/redc
 
-> 注意：每个模板场景文件夹路径都可以单独使用，即 “不依靠 redc 引擎，独立使用“
+> Note: Each template scenario folder can be used independently, meaning "independent use without relying on the redc engine"
 
-## 文件存储的规划
+## File Storage Planning
 
-文件暂存在 R2 存储上
+Static resources required at runtime are downloaded through proxy links defined in github_proxy in the template. AWS scenarios do not need to consider proxies.
+
+Files generated after execution are stored on R2 storage, implemented through the upload_r2 module of the redc engine
