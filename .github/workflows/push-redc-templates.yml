@@ -3,6 +3,9 @@ name: Build and Deploy
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - 'public/**'
+      - 'index.html'
   workflow_dispatch:
     inputs:
       force_rebuild:
