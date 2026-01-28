@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-27T01:03:55.684786Z",
+  "updated_at": "2026-01-28T05:42:03.466570Z",
   "repo_name": "redc-template-source",
   "templates": {
     "aliyun/ecs": {
@@ -9,8 +9,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.1.zip",
-          "sha256": "d39765dcb2acf877e7508b1e4d5b89923fe36978b5e14ce458ae636bbdff7b2e",
-          "updated_at": "2026-01-27T01:03:55.667314Z"
+          "sha256": "9ae4891ecaabfeaa07df9bd01804fd30286939ddd63da1e52785f7b1b214469d",
+          "updated_at": "2026-01-28T05:42:03.448509Z"
         }
       },
       "latest": "1.0.1",
@@ -28,8 +28,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.1.zip",
-          "sha256": "5bc2628031c1c2883a03761ffc013d1d005b3558b143587735e9eee66762cb88",
-          "updated_at": "2026-01-27T01:03:55.668239Z"
+          "sha256": "a89b116574bde664cdc4ce5aa950d1d6ad397860489fa62fec5a188aade0020a",
+          "updated_at": "2026-01-28T05:42:03.449685Z"
         }
       },
       "latest": "1.0.1",
@@ -47,8 +47,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.1.zip",
-          "sha256": "98295162c7f7b916cf6e0352f8ec21cfdd673be5576956ac990ec84c62b6f32f",
-          "updated_at": "2026-01-27T01:03:55.669215Z"
+          "sha256": "ae0334346d1551cded9671a2e96c013985054bc1e3bf1bdf68b1815619d018c3",
+          "updated_at": "2026-01-28T05:42:03.450715Z"
         }
       },
       "latest": "1.0.1",
@@ -66,8 +66,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.1.zip",
-          "sha256": "8e3454518d35b5af472dc0762b41cfa755258910758a3230e4683538519dd291",
-          "updated_at": "2026-01-27T01:03:55.670206Z"
+          "sha256": "d796018efafb3d63153dbdcf18d1c49de992e3c53a2493e77a09aec94599dd5c",
+          "updated_at": "2026-01-28T05:42:03.451727Z"
         }
       },
       "latest": "1.0.1",
@@ -85,8 +85,8 @@
       "versions": {
         "1.0.6": {
           "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.0.6.zip",
-          "sha256": "4ce7a3174b23ea96310154da45a33311ed934081f3027d80802b2c345685f09a",
-          "updated_at": "2026-01-27T01:03:55.671247Z"
+          "sha256": "b8e31dc3465e1605903de0ff18c6d6b13b0a10130ab9f0caf188325b655c9406",
+          "updated_at": "2026-01-28T05:42:03.452775Z"
         }
       },
       "latest": "1.0.6",
@@ -104,8 +104,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.1.zip",
-          "sha256": "d75c9c05263f491d92f3312da31bb1ab09f66cab2c41e7cd174a78d8d1c667f8",
-          "updated_at": "2026-01-27T01:03:55.672192Z"
+          "sha256": "40c52845cf9058333c27f06af2711d047fc308bda2e089ee5cfc385331c0665e",
+          "updated_at": "2026-01-28T05:42:03.453758Z"
         }
       },
       "latest": "1.0.1",
@@ -123,8 +123,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.0.zip",
-          "sha256": "8950be0cb09248c31c15a0761d8bbdf49f29f0e87a81c8500428c2684e92bd36",
-          "updated_at": "2026-01-27T01:03:55.673162Z"
+          "sha256": "848bfd3b618be08dec471a2f0da097ae7c5ada75c38038a4898415c0fd6b2256",
+          "updated_at": "2026-01-28T05:42:03.454747Z"
         }
       },
       "latest": "1.0.0",
@@ -142,8 +142,8 @@
       "versions": {
         "1.0.4": {
           "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.0.4.zip",
-          "sha256": "faebf1fa19a87d50d0915e0df33992f68cba15550827a57c52200beb54c3945c",
-          "updated_at": "2026-01-27T01:03:55.674149Z"
+          "sha256": "01e1c9cc90754a352ba4a17fcb0422e7f20e2d51e11331afdbddf5d5554c6534",
+          "updated_at": "2026-01-28T05:42:03.455843Z"
         }
       },
       "latest": "1.0.4",
@@ -161,8 +161,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.0.zip",
-          "sha256": "701a8d27c30bb76bd0c030185a8b39bda85f6eff2ea56d054119669e2e28cca3",
-          "updated_at": "2026-01-27T01:03:55.674973Z"
+          "sha256": "9f41c508f3ac0cce5514be28ab1988dc24cb217e9a7948679d448262757b4cdd",
+          "updated_at": "2026-01-28T05:42:03.456597Z"
         }
       },
       "latest": "1.0.0",
@@ -180,8 +180,8 @@
       "versions": {
         "0.0.1": {
           "url": "https://redc.zeoday.org/templates/aws_ec2_v0.0.1.zip",
-          "sha256": "06c4697584a17ddb6b1587dbd547318b70f5e914dca2951dc60fbeb0deb441c1",
-          "updated_at": "2026-01-27T01:03:55.675720Z"
+          "sha256": "db4395bd068775ee19f3838c829f1a0004110b07b853d0b75bf7f7d90baf8e85",
+          "updated_at": "2026-01-28T05:42:03.457389Z"
         }
       },
       "latest": "0.0.1",
@@ -199,8 +199,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.0.zip",
-          "sha256": "920b2354a245ed1cbaf59388955ffa4bcea215ade916088b9a6ca7896d83f220",
-          "updated_at": "2026-01-27T01:03:55.676404Z"
+          "sha256": "f223ccb4d390d1051e98be4514054ede7cfd5a02df3d545db898b1c4c6b30dfa",
+          "updated_at": "2026-01-28T05:42:03.458153Z"
         }
       },
       "latest": "1.0.0",
@@ -218,8 +218,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.0.zip",
-          "sha256": "f836ad8a7bd2d1065129e6f62e809c0542ecd58fd21e08f47b3e83678f925b42",
-          "updated_at": "2026-01-27T01:03:55.677120Z"
+          "sha256": "f0e056ec021be7f245976429c8b0a63a1c078ca7beb4f30e758eaa30adc34d20",
+          "updated_at": "2026-01-28T05:42:03.458890Z"
         }
       },
       "latest": "1.0.0",
@@ -237,8 +237,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.3.zip",
-          "sha256": "146f36f5d7b8ebfb3678ad8965dc2f0fcf1d0e977245ce8e45cd1a596bac945a",
-          "updated_at": "2026-01-27T01:03:55.678027Z"
+          "sha256": "201a2b83c31da6edfc12828f612935adf9d9bc492879e2ad881cf305b95c2ff5",
+          "updated_at": "2026-01-28T05:42:03.459761Z"
         }
       },
       "latest": "1.0.3",
@@ -256,8 +256,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/aws_md_v1.0.0.zip",
-          "sha256": "5c90b5e499a677c02021283b2d7b55604c99aef82d6b85ad53f449147a444605",
-          "updated_at": "2026-01-27T01:03:55.678995Z"
+          "sha256": "ca10be46edb532a54ea947e227d4329ac03f2bcc15d074eb757fd417252b4419",
+          "updated_at": "2026-01-28T05:42:03.460677Z"
         }
       },
       "latest": "1.0.0",
@@ -275,8 +275,8 @@
       "versions": {
         "1.0.7": {
           "url": "https://redc.zeoday.org/templates/aws_proxy_v1.0.7.zip",
-          "sha256": "a0cb9ea489988b1bacc42609b9b1746df5d58f08fa67dea7aa2185dd05935700",
-          "updated_at": "2026-01-27T01:03:55.680034Z"
+          "sha256": "0fab54b1c74adb18ced914da961d4b88154d8d24436445ec57eab40f36c16a20",
+          "updated_at": "2026-01-28T05:42:03.461696Z"
         }
       },
       "latest": "1.0.7",
@@ -294,8 +294,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.0.zip",
-          "sha256": "7a094c8fa7e35f79f346629fa8740a7f131e22c9c6c373a4090ee6b033d90d0c",
-          "updated_at": "2026-01-27T01:03:55.681003Z"
+          "sha256": "7b1964bdb997abb76b5616cae70e2ee403fd892ecc9d4aab3b7645c79842a9e5",
+          "updated_at": "2026-01-28T05:42:03.462671Z"
         }
       },
       "latest": "1.0.0",
@@ -313,8 +313,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.0.zip",
-          "sha256": "88efdf8cec956ef8b54c3acfbef357301894a162723215bf77b5709a4f226214",
-          "updated_at": "2026-01-27T01:03:55.681977Z"
+          "sha256": "ee8bdb0edcf63d7aae1880684421ed1387fc88255906ce7c05c1d4df1ba81571",
+          "updated_at": "2026-01-28T05:42:03.463678Z"
         }
       },
       "latest": "1.0.0",
@@ -332,8 +332,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.1.zip",
-          "sha256": "09cd4ef90e3c26cc0c0274bf2cb81a41f46c990c73c89ef18d03bfd79b30dc57",
-          "updated_at": "2026-01-27T01:03:55.683114Z"
+          "sha256": "b7b865c8904e03af59b29e51629e4b6f2e7cc747f37f34f0a8caa124d2a27667",
+          "updated_at": "2026-01-28T05:42:03.464874Z"
         }
       },
       "latest": "1.0.1",
@@ -351,8 +351,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.1.zip",
-          "sha256": "069dbf682b5b4b23fc68424a29c3081589adadfa02f85cc9861b52d1fe9e0548",
-          "updated_at": "2026-01-27T01:03:55.683938Z"
+          "sha256": "e6cb63c2dfff318ceb3ffc8da9c04092034f41a469ea71384fd2a4cd303666dd",
+          "updated_at": "2026-01-28T05:42:03.465708Z"
         }
       },
       "latest": "1.0.1",
@@ -370,8 +370,8 @@
       "versions": {
         "0.0.1": {
           "url": "https://redc.zeoday.org/templates/vultr_hk-vps_v0.0.1.zip",
-          "sha256": "d18310ca9828e6b332bc3133962b70ad840a7fbcb57d38d2e5c4c1fc02bf1df9",
-          "updated_at": "2026-01-27T01:03:55.684753Z"
+          "sha256": "65519fd7220c4cf0e0adcb4c83ac77ec4f7f5555e435c9e1aae9bb1fea90416e",
+          "updated_at": "2026-01-28T05:42:03.466535Z"
         }
       },
       "latest": "0.0.1",
