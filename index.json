@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-01-28T05:42:03.466570Z",
+  "updated_at": "2026-02-05T10:18:02.393559Z",
   "repo_name": "redc-template-source",
   "templates": {
     "aliyun/ecs": {
@@ -7,13 +7,13 @@
       "provider": "aliyun",
       "slug": "ecs",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.1.zip",
-          "sha256": "9ae4891ecaabfeaa07df9bd01804fd30286939ddd63da1e52785f7b1b214469d",
-          "updated_at": "2026-01-28T05:42:03.448509Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.2.zip",
+          "sha256": "38c95207b0750fd311488df111eaadcbf73e9921a642b4f274bb14396d856c26",
+          "updated_at": "2026-02-05T10:18:02.375332Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "ecs",
         "author": "r0fus0d",
@@ -26,13 +26,13 @@
       "provider": "aliyun",
       "slug": "ecs1c2g",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.1.zip",
-          "sha256": "a89b116574bde664cdc4ce5aa950d1d6ad397860489fa62fec5a188aade0020a",
-          "updated_at": "2026-01-28T05:42:03.449685Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.2.zip",
+          "sha256": "65b1bdac3de2129f6af89db207d2b66a756066dd496ec0cc9b36048c3a51af29",
+          "updated_at": "2026-02-05T10:18:02.376627Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "ecs1c2g",
         "author": "r0fus0d",
@@ -45,13 +45,13 @@
       "provider": "aliyun",
       "slug": "file",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.1.zip",
-          "sha256": "ae0334346d1551cded9671a2e96c013985054bc1e3bf1bdf68b1815619d018c3",
-          "updated_at": "2026-01-28T05:42:03.450715Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.2.zip",
+          "sha256": "14b16b53d83bfe974ac82996020c7cfe82bc008d5ed3da270d585b33ba929868",
+          "updated_at": "2026-02-05T10:18:02.377645Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "file",
         "author": "r0fus0d",
@@ -64,13 +64,13 @@
       "provider": "aliyun",
       "slug": "jndi",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.1.zip",
-          "sha256": "d796018efafb3d63153dbdcf18d1c49de992e3c53a2493e77a09aec94599dd5c",
-          "updated_at": "2026-01-28T05:42:03.451727Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.2.zip",
+          "sha256": "d5561803c5183700fd457fa271af55e9956a7413d40cb90d29a481c7806bf0b8",
+          "updated_at": "2026-02-05T10:18:02.378675Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "jndi",
         "author": "r0fus0d",
@@ -83,13 +83,13 @@
       "provider": "aliyun",
       "slug": "proxy",
       "versions": {
-        "1.0.6": {
-          "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.0.6.zip",
-          "sha256": "b8e31dc3465e1605903de0ff18c6d6b13b0a10130ab9f0caf188325b655c9406",
-          "updated_at": "2026-01-28T05:42:03.452775Z"
+        "1.0.7": {
+          "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.0.7.zip",
+          "sha256": "b5642bafa14fa2eefc5691eebc81c6c531bc07c5a8eef609c3b9e718b5b72bff",
+          "updated_at": "2026-02-05T10:18:02.379776Z"
         }
       },
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "metadata": {
         "name": "proxy",
         "author": "r0fus0d",
@@ -102,13 +102,13 @@
       "provider": "aliyun",
       "slug": "sliver",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.1.zip",
-          "sha256": "40c52845cf9058333c27f06af2711d047fc308bda2e089ee5cfc385331c0665e",
-          "updated_at": "2026-01-28T05:42:03.453758Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.2.zip",
+          "sha256": "c895add95d4873faa639ba2d365949f53a31d9c56ad80bb61ddad564f243b34e",
+          "updated_at": "2026-02-05T10:18:02.380753Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "sliver",
         "author": "r0fus0d",
@@ -121,13 +121,13 @@
       "provider": "aliyun",
       "slug": "yakit",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.0.zip",
-          "sha256": "848bfd3b618be08dec471a2f0da097ae7c5ada75c38038a4898415c0fd6b2256",
-          "updated_at": "2026-01-28T05:42:03.454747Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.1.zip",
+          "sha256": "6e13a5927d53cae99624012a9491adf6109ef70ce9f9fa6f7a8ced0cd77b81fa",
+          "updated_at": "2026-02-05T10:18:02.381742Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "yakit",
         "author": "r0fus0d",
@@ -140,18 +140,18 @@
       "provider": "aws",
       "slug": "dnslog",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.0.4.zip",
-          "sha256": "01e1c9cc90754a352ba4a17fcb0422e7f20e2d51e11331afdbddf5d5554c6534",
-          "updated_at": "2026-01-28T05:42:03.455843Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.0.5.zip",
+          "sha256": "34ae34731f7071e5986d87aa170edcdd41f429cb3be42297efb7a3f5452c8179",
+          "updated_at": "2026-02-05T10:18:02.382784Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "dnslog",
         "author": "r0fus0d",
-        "description": "AWS DNSLog 场景，ap-east-1 区域，t4g.nano 实例，内置 pdnslog 与前端静态资源，需配置 Cloudflare/launch template",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/dnslog\n```\n\n开启\n```\nredc run aws/dnslog -e domain=dnslog.com\n\n# domain 是你的 dnslog 域名\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 cf api 该场景创建完毕后需要手动修改 cname\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**dig.pm 配置**\n- https://github.com/yumusb/DNSLog-Platform-Golang\n\n可以用我编译好的版本 (没啥区别,也可以自己编译原版)\n- https://github.com/No-Github/pdnslog/releases/tag/v1.0.0\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n**cf 配置**\n\n申请 API 令牌\n\n配置类似如下 (ip 先随便填一个)(域名加个 ns1)\n```\n# A ns1 1.2.34\n# NS a ns1.dnslog.com\n```\n\n**redc config.yaml 配置**\n\nconfig.yaml 中配置你的 cf 的 邮箱 和 accesskey\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n5. cf 的 dns 配置不对\n6. cf 的 key 权限不够\n"
+        "description": "AWS DNSLog 场景，ap-east-1 区域，t4g.nano 实例，内置 pdnslog 与前端静态资源，需配置 Cloudflare",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/dnslog\n```\n\n开启\n```\nredc run aws/dnslog -e domain=dnslog.com\n\n# domain 是你的 dnslog 域名\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 cf api 该场景创建完毕后需要手动修改 cname\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**dig.pm 配置**\n- https://github.com/yumusb/DNSLog-Platform-Golang\n\n可以用我编译好的版本 (没啥区别,也可以自己编译原版)\n- https://github.com/No-Github/pdnslog/releases/tag/v1.0.0\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**cf 配置**\n\n申请 API 令牌\n\n配置类似如下 (ip 先随便填一个)(域名加个 ns1)\n```\n# A ns1 1.2.34\n# NS a ns1.dnslog.com\n```\n\n**redc config.yaml 配置**\n\nconfig.yaml 中配置你的 cf 的 邮箱 和 accesskey\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n4. cf 的 dns 配置不对\n5. cf 的 key 权限不够\n"
       }
     },
     "aws/docker": {
@@ -159,18 +159,18 @@
       "provider": "aws",
       "slug": "docker",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.0.zip",
-          "sha256": "9f41c508f3ac0cce5514be28ab1988dc24cb217e9a7948679d448262757b4cdd",
-          "updated_at": "2026-01-28T05:42:03.456597Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.1.zip",
+          "sha256": "2e92470145c38a9880c6d21710efbd9e8265ff47973dd383a7dce98a7b6403e9",
+          "updated_at": "2026-02-05T10:18:02.383510Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "docker",
         "author": "r0fus0d",
         "description": "AWS Docker 基础场景，ap-east-1 区域，t3.medium 实例，预装 f8x 自动安装 Docker，tmux 后台拉起环境",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/docker\n```\n\n开启\n```\nredc run aws/docker\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\ntmux 中可看安装进度\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n"
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/docker\n```\n\n开启\n```\nredc run aws/docker\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\ntmux 中可看安装进度\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n"
       }
     },
     "aws/ec2": {
@@ -178,18 +178,18 @@
       "provider": "aws",
       "slug": "ec2",
       "versions": {
-        "0.0.1": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2_v0.0.1.zip",
-          "sha256": "db4395bd068775ee19f3838c829f1a0004110b07b853d0b75bf7f7d90baf8e85",
-          "updated_at": "2026-01-28T05:42:03.457389Z"
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2_v1.0.0.zip",
+          "sha256": "c7381c6013067ba8c68f38b7e49d29d4e6792674557b11b366634fedc6aba923",
+          "updated_at": "2026-02-05T10:18:02.384259Z"
         }
       },
-      "latest": "0.0.1",
+      "latest": "1.0.0",
       "metadata": {
         "name": "ec2",
         "author": "r0fus0d",
         "description": "AWS 通用 ECS 场景，ap-east-1 区域，t4g.small 实例，预装基础运维工具并屏蔽 169.254.169.254 元数据访问",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2\n```\n\n开启\n```\nredc run aws/ec2\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n"
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2\n```\n\n开启\n```\nredc run aws/ec2\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n"
       }
     },
     "aws/ec2-1G": {
@@ -197,18 +197,18 @@
       "provider": "aws",
       "slug": "ec2-1G",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.0.zip",
-          "sha256": "f223ccb4d390d1051e98be4514054ede7cfd5a02df3d545db898b1c4c6b30dfa",
-          "updated_at": "2026-01-28T05:42:03.458153Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.1.zip",
+          "sha256": "be8496ece6bb306713a6ab74d3cd04f2c81fec636d61d412e0c3cfbb57e772ec",
+          "updated_at": "2026-02-05T10:18:02.385011Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "ec2-1G",
         "author": "r0fus0d",
         "description": "AWS 轻量 ECS 场景，ap-east-1 区域，t4g.micro 实例，预装基础运维工具并屏蔽元数据访问",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2-1G\n```\n\n开启\n```\nredc run aws/ec2-1G\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n"
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2-1G\n```\n\n开启\n```\nredc run aws/ec2-1G\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n"
       }
     },
     "aws/ec2-4G": {
@@ -216,18 +216,18 @@
       "provider": "aws",
       "slug": "ec2-4G",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.0.zip",
-          "sha256": "f0e056ec021be7f245976429c8b0a63a1c078ca7beb4f30e758eaa30adc34d20",
-          "updated_at": "2026-01-28T05:42:03.458890Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.1.zip",
+          "sha256": "4f120b698b1eeb9d3891a6dfa46877bc9486ae186c17c7eb44af6fb8157501ab",
+          "updated_at": "2026-02-05T10:18:02.385797Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "ec2-4G",
         "author": "r0fus0d",
-        "description": "AWS 增强 ECS 场景，ap-east-1 区域，t3.medium 实例，预装基础运维工具并屏蔽元数据访问",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2-4G\n```\n\n开启\n```\nredc run aws/ec2-4G\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n"
+        "description": "AWS 增强 ECS 场景，ap-east-1 区域，t4g.medium 实例，预装基础运维工具并屏蔽元数据访问",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/ec2-4G\n```\n\n开启\n```\nredc run aws/ec2-4G\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n"
       }
     },
     "aws/interactsh": {
@@ -235,18 +235,18 @@
       "provider": "aws",
       "slug": "interactsh",
       "versions": {
-        "1.0.3": {
-          "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.3.zip",
-          "sha256": "201a2b83c31da6edfc12828f612935adf9d9bc492879e2ad881cf305b95c2ff5",
-          "updated_at": "2026-01-28T05:42:03.459761Z"
+        "1.0.4": {
+          "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.4.zip",
+          "sha256": "0ef0bf921d9174bd049a44da490709ad1285c2d67e7ae5cbc1b0913bb43445bd",
+          "updated_at": "2026-02-05T10:18:02.386712Z"
         }
       },
-      "latest": "1.0.3",
+      "latest": "1.0.4",
       "metadata": {
         "name": "interactsh",
         "author": "r0fus0d",
-        "description": "AWS Interactsh 场景，ap-east-1 区域，t4g.nano 实例，部署 interactsh-server，需提供域名并配置 Cloudflare/launch template",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/interactsh\n```\n\n开启\n```\nredc run aws/interactsh -e domain=dnslog.com\n\n# domain 是你的 dnslog 域名\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 cf api 该场景创建完毕后需要手动修改 cname\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**可自行替换 main.tf 中 interactsh-server 的压缩包下载地址**\n- https://github.com/projectdiscovery/interactsh/releases\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n**cf 配置**\n\n申请 API 令牌\n\n配置类似如下 (ip 先随便填一个)(域名加个 ns1)\n```\n# A ns1 1.2.34\n# NS a ns1.dnslog.com\n```\n\n**redc config.yaml 配置**\n\nconfig.yaml 中配置你的 cf 的 邮箱 和 accesskey\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n5. cf 的 dns 配置不对\n6. cf 的 key 权限不够\n"
+        "description": "AWS Interactsh 场景，ap-east-1 区域，t4g.nano 实例，部署 interactsh-server，需提供域名并配置 Cloudflare",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/interactsh\n```\n\n开启\n```\nredc run aws/interactsh -e domain=dnslog.com\n\n# domain 是你的 dnslog 域名\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 cf api 该场景创建完毕后需要手动修改 cname\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**可自行替换 main.tf 中 interactsh-server 的压缩包下载地址**\n- https://github.com/projectdiscovery/interactsh/releases\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**cf 配置**\n\n申请 API 令牌\n\n配置类似如下 (ip 先随便填一个)(域名加个 ns1)\n```\n# A ns1 1.2.34\n# NS a ns1.dnslog.com\n```\n\n**redc config.yaml 配置**\n\nconfig.yaml 中配置你的 cf 的 邮箱 和 accesskey\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n4. cf 的 dns 配置不对\n5. cf 的 key 权限不够\n"
       }
     },
     "aws/md": {
@@ -254,18 +254,18 @@
       "provider": "aws",
       "slug": "md",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/aws_md_v1.0.0.zip",
-          "sha256": "ca10be46edb532a54ea947e227d4329ac03f2bcc15d074eb757fd417252b4419",
-          "updated_at": "2026-01-28T05:42:03.460677Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/aws_md_v1.0.1.zip",
+          "sha256": "356223d21143d6fce9dbc8566e470cafdf4b010a7328f9dc6b702ea061e822e0",
+          "updated_at": "2026-02-05T10:18:02.387645Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "md",
         "author": "r0fus0d",
-        "description": "AWS HackMD/Docker 场景，ap-east-1 区域，t3.medium 实例，f8x 安装 Docker 并通过自定义 docker-compose.yml 启动",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/md\n```\n\n开启\n```\nredc run aws/md\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**docker-compose.yml 配置**\n- https://github.com/No-Github/Archive/releases/download/1.0.8/docker-compose.yml\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n5. f8x 自动安装 docker 失败\n"
+        "description": "AWS HackMD/Docker 场景，ap-east-1 区域，t4g.medium 实例，f8x 安装 Docker 并通过自定义 docker-compose.yml 启动",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/md\n```\n\n开启\n```\nredc run aws/md\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 静态资源\n\n可自行替换模板中的静态资源下载链接\n\n**docker-compose.yml 配置**\n- https://github.com/No-Github/Archive/releases/download/1.0.8/docker-compose.yml\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n4. f8x 自动安装 docker 失败\n"
       }
     },
     "aws/proxy": {
@@ -273,18 +273,18 @@
       "provider": "aws",
       "slug": "proxy",
       "versions": {
-        "1.0.7": {
-          "url": "https://redc.zeoday.org/templates/aws_proxy_v1.0.7.zip",
-          "sha256": "0fab54b1c74adb18ced914da961d4b88154d8d24436445ec57eab40f36c16a20",
-          "updated_at": "2026-01-28T05:42:03.461696Z"
+        "1.0.8": {
+          "url": "https://redc.zeoday.org/templates/aws_proxy_v1.0.8.zip",
+          "sha256": "c2f375b795cc4b3326c6abfae4df33b445748178e6c6d3f337a5cf2e7d1d8c59",
+          "updated_at": "2026-02-05T10:18:02.388674Z"
         }
       },
-      "latest": "1.0.7",
+      "latest": "1.0.8",
       "metadata": {
         "name": "proxy",
         "author": "r0fus0d",
-        "description": "AWS 多节点代理场景，ap-east-1 区域，默认 t4g.nano 节点（shadowsocks-libev），支持 R2 上传 clash 配置，需自备 launch template",
-        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/proxy\n```\n\n开启\n```\n# 默认 10 台\nredc run aws/proxy\n\n# 通过 -e 参数，进行自定义节点数量,比如开 10 个节点\nredc run aws/proxy -e node=10\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 r2 上传，可以在本地查看 clash 的配置文件\n\n# 注意事项\n\n**r2 配置**\n\ndeploy.sh 中的 upload_to_r2 函数负责将 clash 配置传至 r2\n\n请自行安装 rclone 并设置 rclone 与 r2 的配置\n- https://github.com/rclone/rclone/releases\n- https://dash.cloudflare.com/ 的 r2\n\n![](../../img/redc-1.png)\n\n```\nrclone config\ns3\nCloudflare R2 Storage\nxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nhttps://xxxxxxxxxxxxxxxxxx.r2.cloudflarestorage.com\nauto\n\nrclone lsf r2:test\n```\n\n**可自行替换 deploy.sh 中 upload_to_r2 函数的配置下载地址**\n\n对应\n```\necho \"url : https://这里改成你的 r2 地址/proxyfile/aws-config.yaml\"\n```\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**launch_template 配置**\n\n自行替换 main.tf 中的 launch_template id 值\n\n![](../../img/redc-4.png)\n\n这个按你场景需求进行修改\n\n```\nlaunch_template {\n        id = \"这个改成你的 launch_template id 值\"\n    }\n```\n\n**spot实例**\n\n需要自行在创建 launch_template 时配置\n\n![](../../img/redc-5.png)\n\n若启动场景报错，可能原因\n1. 未替换 main.tf 中的 launch_template id 值\n2. 与 aws api 网络连接超时\n3. aws 该区域售罄或下架 instance_type 的配置机型\n4. 启动模板中的安全组未开放公网访问\n5. rclone配置不正确\n6. r2 存储桶名称和配置不一致\n"
+        "description": "AWS 多节点代理场景，ap-east-1 区域，默认 t4g.nano 节点（shadowsocks-libev），支持 R2 上传 clash 配置",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/proxy\n```\n\n开启\n```\n# 默认 10 台\nredc run aws/proxy\n\n# 通过 -e 参数，进行自定义节点数量,比如开 10 个节点\nredc run aws/proxy -e node=10\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 r2 上传，可以在本地查看 clash 的配置文件\n\n# 注意事项\n\n**r2 配置**\n\ndeploy.sh 中的 upload_to_r2 函数负责将 clash 配置传至 r2\n\n请自行安装 rclone 并设置 rclone 与 r2 的配置\n- https://github.com/rclone/rclone/releases\n- https://dash.cloudflare.com/ 的 r2\n\n![](../../img/redc-1.png)\n\n```\nrclone config\ns3\nCloudflare R2 Storage\nxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nhttps://xxxxxxxxxxxxxxxxxx.r2.cloudflarestorage.com\nauto\n\nrclone lsf r2:test\n```\n\n**可自行替换 deploy.sh 中 upload_to_r2 函数的配置下载地址**\n\n对应\n```\necho \"url : https://这里改成你的 r2 地址/proxyfile/aws-config.yaml\"\n```\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n4. rclone配置不正确\n5. r2 存储桶名称和配置不一致\n"
       }
     },
     "tencent/file": {
@@ -292,13 +292,13 @@
       "provider": "tencent",
       "slug": "file",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.0.zip",
-          "sha256": "7b1964bdb997abb76b5616cae70e2ee403fd892ecc9d4aab3b7645c79842a9e5",
-          "updated_at": "2026-01-28T05:42:03.462671Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.1.zip",
+          "sha256": "da32363b9b3dfbc1c9c1a1a4f511517b666ec259b0bd79867917bf0d587b8157",
+          "updated_at": "2026-02-05T10:18:02.389646Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "file",
         "author": "r0fus0d",
@@ -311,13 +311,13 @@
       "provider": "tencent",
       "slug": "jndi",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.0.zip",
-          "sha256": "ee8bdb0edcf63d7aae1880684421ed1387fc88255906ce7c05c1d4df1ba81571",
-          "updated_at": "2026-01-28T05:42:03.463678Z"
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.1.zip",
+          "sha256": "074e9a3e7ebeed0e87f5e8e6f97ba6e61fe74c80fb40a2d0475fb0648893a8a2",
+          "updated_at": "2026-02-05T10:18:02.390614Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "metadata": {
         "name": "jndi",
         "author": "r0fus0d",
@@ -330,13 +330,13 @@
       "provider": "tencent",
       "slug": "nps",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.1.zip",
-          "sha256": "b7b865c8904e03af59b29e51629e4b6f2e7cc747f37f34f0a8caa124d2a27667",
-          "updated_at": "2026-01-28T05:42:03.464874Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.2.zip",
+          "sha256": "4d4eca5dc1fb71ddc27319e6aa645a06a7ebcfffb72d2d0a7fd0b209edbb6042",
+          "updated_at": "2026-02-05T10:18:02.391837Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "nps",
         "author": "r0fus0d",
@@ -349,13 +349,13 @@
       "provider": "volcengine",
       "slug": "ecs",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.1.zip",
-          "sha256": "e6cb63c2dfff318ceb3ffc8da9c04092034f41a469ea71384fd2a4cd303666dd",
-          "updated_at": "2026-01-28T05:42:03.465708Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.2.zip",
+          "sha256": "00d7375cf74e1045a2a33a16fcc17e614918740be69991fd87a97a903c1f0846",
+          "updated_at": "2026-02-05T10:18:02.392723Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "ecs",
         "author": "copilot",
@@ -370,8 +370,8 @@
       "versions": {
         "0.0.1": {
           "url": "https://redc.zeoday.org/templates/vultr_hk-vps_v0.0.1.zip",
-          "sha256": "65519fd7220c4cf0e0adcb4c83ac77ec4f7f5555e435c9e1aae9bb1fea90416e",
-          "updated_at": "2026-01-28T05:42:03.466535Z"
+          "sha256": "0854b31b95cc71d6c9ab17d624737c92545c77eec09532a1355f6cccdb2f8b37",
+          "updated_at": "2026-02-05T10:18:02.393519Z"
         }
       },
       "latest": "0.0.1",
